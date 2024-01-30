@@ -1,0 +1,674 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		37D400972B696CE100D7D709 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400962B696CE100D7D709 /* AppDelegate.swift */; };
+		37D400992B696CE100D7D709 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400982B696CE100D7D709 /* SceneDelegate.swift */; };
+		37D4009B2B696CE100D7D709 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D4009A2B696CE100D7D709 /* ViewController.swift */; };
+		37D400A02B696CE300D7D709 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37D4009F2B696CE300D7D709 /* Assets.xcassets */; };
+		37D400A32B696CE300D7D709 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D400A12B696CE300D7D709 /* LaunchScreen.storyboard */; };
+		37D400AE2B696CE300D7D709 /* sharVPNTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400AD2B696CE300D7D709 /* sharVPNTests.swift */; };
+		37D400B82B696CE300D7D709 /* sharVPNUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400B72B696CE300D7D709 /* sharVPNUITests.swift */; };
+		37D400BA2B696CE300D7D709 /* sharVPNUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400B92B696CE300D7D709 /* sharVPNUITestsLaunchTests.swift */; };
+		37D400D22B69742700D7D709 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400D12B69742700D7D709 /* UIFont+Extension.swift */; };
+		37D400D82B6980E100D7D709 /* MontserratAlternates-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37D400D32B6980E100D7D709 /* MontserratAlternates-Bold.ttf */; };
+		37D400D92B6980E100D7D709 /* MontserratAlternates-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37D400D42B6980E100D7D709 /* MontserratAlternates-SemiBold.ttf */; };
+		37D400DA2B6980E100D7D709 /* MontserratAlternates-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37D400D52B6980E100D7D709 /* MontserratAlternates-Regular.ttf */; };
+		37D400DB2B6980E100D7D709 /* MontserratAlternates-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37D400D62B6980E100D7D709 /* MontserratAlternates-Light.ttf */; };
+		37D400DC2B6980E100D7D709 /* MontserratAlternates-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37D400D72B6980E100D7D709 /* MontserratAlternates-Medium.ttf */; };
+		37D400DE2B69811C00D7D709 /* NeuropolX.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37D400DD2B69811C00D7D709 /* NeuropolX.ttf */; };
+		37D400E02B698EC700D7D709 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400DF2B698EC700D7D709 /* UIColor+Extension.swift */; };
+		37D400E22B698F4E00D7D709 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400E12B698F4E00D7D709 /* AppColors.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		37D400AA2B696CE300D7D709 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37D4008B2B696CE100D7D709 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37D400922B696CE100D7D709;
+			remoteInfo = sharVPN;
+		};
+		37D400B42B696CE300D7D709 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37D4008B2B696CE100D7D709 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37D400922B696CE100D7D709;
+			remoteInfo = sharVPN;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		37D400932B696CE100D7D709 /* sharVPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sharVPN.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37D400962B696CE100D7D709 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		37D400982B696CE100D7D709 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		37D4009A2B696CE100D7D709 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		37D4009F2B696CE300D7D709 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37D400A22B696CE300D7D709 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		37D400A42B696CE300D7D709 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37D400A92B696CE300D7D709 /* sharVPNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sharVPNTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37D400AD2B696CE300D7D709 /* sharVPNTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sharVPNTests.swift; sourceTree = "<group>"; };
+		37D400B32B696CE300D7D709 /* sharVPNUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sharVPNUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37D400B72B696CE300D7D709 /* sharVPNUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sharVPNUITests.swift; sourceTree = "<group>"; };
+		37D400B92B696CE300D7D709 /* sharVPNUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sharVPNUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		37D400D12B69742700D7D709 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		37D400D32B6980E100D7D709 /* MontserratAlternates-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MontserratAlternates-Bold.ttf"; path = "../../../../../../Downloads/Montserrat_Alternates 2/MontserratAlternates-Bold.ttf"; sourceTree = "<group>"; };
+		37D400D42B6980E100D7D709 /* MontserratAlternates-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MontserratAlternates-SemiBold.ttf"; path = "../../../../../../Downloads/Montserrat_Alternates 2/MontserratAlternates-SemiBold.ttf"; sourceTree = "<group>"; };
+		37D400D52B6980E100D7D709 /* MontserratAlternates-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MontserratAlternates-Regular.ttf"; path = "../../../../../../Downloads/Montserrat_Alternates 2/MontserratAlternates-Regular.ttf"; sourceTree = "<group>"; };
+		37D400D62B6980E100D7D709 /* MontserratAlternates-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MontserratAlternates-Light.ttf"; path = "../../../../../../Downloads/Montserrat_Alternates 2/MontserratAlternates-Light.ttf"; sourceTree = "<group>"; };
+		37D400D72B6980E100D7D709 /* MontserratAlternates-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MontserratAlternates-Medium.ttf"; path = "../../../../../../Downloads/Montserrat_Alternates 2/MontserratAlternates-Medium.ttf"; sourceTree = "<group>"; };
+		37D400DD2B69811C00D7D709 /* NeuropolX.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NeuropolX.ttf; path = "../../../../../../Downloads/Neuropol X 2/NeuropolX.ttf"; sourceTree = "<group>"; };
+		37D400DF2B698EC700D7D709 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		37D400E12B698F4E00D7D709 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37D400902B696CE100D7D709 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37D400A62B696CE300D7D709 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37D400B02B696CE300D7D709 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37D4008A2B696CE100D7D709 = {
+			isa = PBXGroup;
+			children = (
+				37D400952B696CE100D7D709 /* sharVPN */,
+				37D400AC2B696CE300D7D709 /* sharVPNTests */,
+				37D400B62B696CE300D7D709 /* sharVPNUITests */,
+				37D400942B696CE100D7D709 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		37D400942B696CE100D7D709 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37D400932B696CE100D7D709 /* sharVPN.app */,
+				37D400A92B696CE300D7D709 /* sharVPNTests.xctest */,
+				37D400B32B696CE300D7D709 /* sharVPNUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37D400952B696CE100D7D709 /* sharVPN */ = {
+			isa = PBXGroup;
+			children = (
+				37D400C62B6972A100D7D709 /* Resources */,
+				37D400962B696CE100D7D709 /* AppDelegate.swift */,
+				37D400982B696CE100D7D709 /* SceneDelegate.swift */,
+				37D4009A2B696CE100D7D709 /* ViewController.swift */,
+				37D4009F2B696CE300D7D709 /* Assets.xcassets */,
+				37D400A12B696CE300D7D709 /* LaunchScreen.storyboard */,
+				37D400A42B696CE300D7D709 /* Info.plist */,
+			);
+			path = sharVPN;
+			sourceTree = "<group>";
+		};
+		37D400AC2B696CE300D7D709 /* sharVPNTests */ = {
+			isa = PBXGroup;
+			children = (
+				37D400AD2B696CE300D7D709 /* sharVPNTests.swift */,
+			);
+			path = sharVPNTests;
+			sourceTree = "<group>";
+		};
+		37D400B62B696CE300D7D709 /* sharVPNUITests */ = {
+			isa = PBXGroup;
+			children = (
+				37D400B72B696CE300D7D709 /* sharVPNUITests.swift */,
+				37D400B92B696CE300D7D709 /* sharVPNUITestsLaunchTests.swift */,
+			);
+			path = sharVPNUITests;
+			sourceTree = "<group>";
+		};
+		37D400C62B6972A100D7D709 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				37D400D02B6973F400D7D709 /* Extensions */,
+				37D400C72B6972B700D7D709 /* Fonts */,
+				37D400E12B698F4E00D7D709 /* AppColors.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		37D400C72B6972B700D7D709 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				37D400CE2B69730900D7D709 /* NeuropolX */,
+				37D400C82B6972D600D7D709 /* MontserratAlternates */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		37D400C82B6972D600D7D709 /* MontserratAlternates */ = {
+			isa = PBXGroup;
+			children = (
+				37D400D32B6980E100D7D709 /* MontserratAlternates-Bold.ttf */,
+				37D400D62B6980E100D7D709 /* MontserratAlternates-Light.ttf */,
+				37D400D72B6980E100D7D709 /* MontserratAlternates-Medium.ttf */,
+				37D400D52B6980E100D7D709 /* MontserratAlternates-Regular.ttf */,
+				37D400D42B6980E100D7D709 /* MontserratAlternates-SemiBold.ttf */,
+			);
+			path = MontserratAlternates;
+			sourceTree = "<group>";
+		};
+		37D400CE2B69730900D7D709 /* NeuropolX */ = {
+			isa = PBXGroup;
+			children = (
+				37D400DD2B69811C00D7D709 /* NeuropolX.ttf */,
+			);
+			path = NeuropolX;
+			sourceTree = "<group>";
+		};
+		37D400D02B6973F400D7D709 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				37D400D12B69742700D7D709 /* UIFont+Extension.swift */,
+				37D400DF2B698EC700D7D709 /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37D400922B696CE100D7D709 /* sharVPN */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37D400BD2B696CE300D7D709 /* Build configuration list for PBXNativeTarget "sharVPN" */;
+			buildPhases = (
+				37D4008F2B696CE100D7D709 /* Sources */,
+				37D400902B696CE100D7D709 /* Frameworks */,
+				37D400912B696CE100D7D709 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sharVPN;
+			productName = sharVPN;
+			productReference = 37D400932B696CE100D7D709 /* sharVPN.app */;
+			productType = "com.apple.product-type.application";
+		};
+		37D400A82B696CE300D7D709 /* sharVPNTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37D400C02B696CE300D7D709 /* Build configuration list for PBXNativeTarget "sharVPNTests" */;
+			buildPhases = (
+				37D400A52B696CE300D7D709 /* Sources */,
+				37D400A62B696CE300D7D709 /* Frameworks */,
+				37D400A72B696CE300D7D709 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37D400AB2B696CE300D7D709 /* PBXTargetDependency */,
+			);
+			name = sharVPNTests;
+			productName = sharVPNTests;
+			productReference = 37D400A92B696CE300D7D709 /* sharVPNTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		37D400B22B696CE300D7D709 /* sharVPNUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37D400C32B696CE300D7D709 /* Build configuration list for PBXNativeTarget "sharVPNUITests" */;
+			buildPhases = (
+				37D400AF2B696CE300D7D709 /* Sources */,
+				37D400B02B696CE300D7D709 /* Frameworks */,
+				37D400B12B696CE300D7D709 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37D400B52B696CE300D7D709 /* PBXTargetDependency */,
+			);
+			name = sharVPNUITests;
+			productName = sharVPNUITests;
+			productReference = 37D400B32B696CE300D7D709 /* sharVPNUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		37D4008B2B696CE100D7D709 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					37D400922B696CE100D7D709 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					37D400A82B696CE300D7D709 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 37D400922B696CE100D7D709;
+					};
+					37D400B22B696CE300D7D709 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 37D400922B696CE100D7D709;
+					};
+				};
+			};
+			buildConfigurationList = 37D4008E2B696CE100D7D709 /* Build configuration list for PBXProject "sharVPN" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 37D4008A2B696CE100D7D709;
+			productRefGroup = 37D400942B696CE100D7D709 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37D400922B696CE100D7D709 /* sharVPN */,
+				37D400A82B696CE300D7D709 /* sharVPNTests */,
+				37D400B22B696CE300D7D709 /* sharVPNUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37D400912B696CE100D7D709 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D400A32B696CE300D7D709 /* LaunchScreen.storyboard in Resources */,
+				37D400DB2B6980E100D7D709 /* MontserratAlternates-Light.ttf in Resources */,
+				37D400D92B6980E100D7D709 /* MontserratAlternates-SemiBold.ttf in Resources */,
+				37D400D82B6980E100D7D709 /* MontserratAlternates-Bold.ttf in Resources */,
+				37D400DA2B6980E100D7D709 /* MontserratAlternates-Regular.ttf in Resources */,
+				37D400DE2B69811C00D7D709 /* NeuropolX.ttf in Resources */,
+				37D400A02B696CE300D7D709 /* Assets.xcassets in Resources */,
+				37D400DC2B6980E100D7D709 /* MontserratAlternates-Medium.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37D400A72B696CE300D7D709 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37D400B12B696CE300D7D709 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37D4008F2B696CE100D7D709 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D4009B2B696CE100D7D709 /* ViewController.swift in Sources */,
+				37D400972B696CE100D7D709 /* AppDelegate.swift in Sources */,
+				37D400D22B69742700D7D709 /* UIFont+Extension.swift in Sources */,
+				37D400E22B698F4E00D7D709 /* AppColors.swift in Sources */,
+				37D400992B696CE100D7D709 /* SceneDelegate.swift in Sources */,
+				37D400E02B698EC700D7D709 /* UIColor+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37D400A52B696CE300D7D709 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D400AE2B696CE300D7D709 /* sharVPNTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37D400AF2B696CE300D7D709 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D400B82B696CE300D7D709 /* sharVPNUITests.swift in Sources */,
+				37D400BA2B696CE300D7D709 /* sharVPNUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		37D400AB2B696CE300D7D709 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37D400922B696CE100D7D709 /* sharVPN */;
+			targetProxy = 37D400AA2B696CE300D7D709 /* PBXContainerItemProxy */;
+		};
+		37D400B52B696CE300D7D709 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37D400922B696CE100D7D709 /* sharVPN */;
+			targetProxy = 37D400B42B696CE300D7D709 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		37D400A12B696CE300D7D709 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37D400A22B696CE300D7D709 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		37D400BB2B696CE300D7D709 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		37D400BC2B696CE300D7D709 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		37D400BE2B696CE300D7D709 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y9GCU93VT4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = sharVPN/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rakhmatov.sharVPN;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		37D400BF2B696CE300D7D709 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y9GCU93VT4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = sharVPN/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rakhmatov.sharVPN;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		37D400C12B696CE300D7D709 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y9GCU93VT4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rakhmatov.sharVPNTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sharVPN.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/sharVPN";
+			};
+			name = Debug;
+		};
+		37D400C22B696CE300D7D709 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y9GCU93VT4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rakhmatov.sharVPNTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sharVPN.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/sharVPN";
+			};
+			name = Release;
+		};
+		37D400C42B696CE300D7D709 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y9GCU93VT4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rakhmatov.sharVPNUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = sharVPN;
+			};
+			name = Debug;
+		};
+		37D400C52B696CE300D7D709 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y9GCU93VT4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rakhmatov.sharVPNUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = sharVPN;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37D4008E2B696CE100D7D709 /* Build configuration list for PBXProject "sharVPN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37D400BB2B696CE300D7D709 /* Debug */,
+				37D400BC2B696CE300D7D709 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37D400BD2B696CE300D7D709 /* Build configuration list for PBXNativeTarget "sharVPN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37D400BE2B696CE300D7D709 /* Debug */,
+				37D400BF2B696CE300D7D709 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37D400C02B696CE300D7D709 /* Build configuration list for PBXNativeTarget "sharVPNTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37D400C12B696CE300D7D709 /* Debug */,
+				37D400C22B696CE300D7D709 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37D400C32B696CE300D7D709 /* Build configuration list for PBXNativeTarget "sharVPNUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37D400C42B696CE300D7D709 /* Debug */,
+				37D400C52B696CE300D7D709 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 37D4008B2B696CE100D7D709 /* Project object */;
+}
