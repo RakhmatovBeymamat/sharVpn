@@ -18,6 +18,7 @@ class MainViewControllerCoordinator: BaseCoordinator {
     override func start() {
         let mainViewController = MainViewController()
         mainViewController.mainViewControllerCoordinator = self
+        navigationController.navigationBar.prefersLargeTitles = true
         navigationController.pushViewController(mainViewController, animated: true)
     }
     
