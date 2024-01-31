@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		37D400972B696CE100D7D709 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400962B696CE100D7D709 /* AppDelegate.swift */; };
 		37D400992B696CE100D7D709 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400982B696CE100D7D709 /* SceneDelegate.swift */; };
-		37D4009B2B696CE100D7D709 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D4009A2B696CE100D7D709 /* ViewController.swift */; };
 		37D400A02B696CE300D7D709 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37D4009F2B696CE300D7D709 /* Assets.xcassets */; };
 		37D400A32B696CE300D7D709 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D400A12B696CE300D7D709 /* LaunchScreen.storyboard */; };
 		37D400AE2B696CE300D7D709 /* sharVPNTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400AD2B696CE300D7D709 /* sharVPNTests.swift */; };
@@ -24,6 +23,15 @@
 		37D400DE2B69811C00D7D709 /* NeuropolX.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37D400DD2B69811C00D7D709 /* NeuropolX.ttf */; };
 		37D400E02B698EC700D7D709 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400DF2B698EC700D7D709 /* UIColor+Extension.swift */; };
 		37D400E22B698F4E00D7D709 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400E12B698F4E00D7D709 /* AppColors.swift */; };
+		37D400E92B6A5BE400D7D709 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400E82B6A5BE400D7D709 /* MainViewController.swift */; };
+		37D400ED2B6A5C1800D7D709 /* MainViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400EC2B6A5C1800D7D709 /* MainViewControllerModel.swift */; };
+		37D400EF2B6A5C2B00D7D709 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400EE2B6A5C2B00D7D709 /* AboutViewController.swift */; };
+		37D400F32B6A5C4700D7D709 /* AboutViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400F22B6A5C4700D7D709 /* AboutViewControllerModel.swift */; };
+		37D400F62B6A5C8A00D7D709 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400F52B6A5C8A00D7D709 /* Coordinator.swift */; };
+		37D400F82B6A5DC800D7D709 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400F72B6A5DC800D7D709 /* BaseCoordinator.swift */; };
+		37D400FA2B6A5E0700D7D709 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400F92B6A5E0700D7D709 /* AppCoordinator.swift */; };
+		37D400FD2B6A5EE400D7D709 /* MainViewControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400FC2B6A5EE400D7D709 /* MainViewControllerCoordinator.swift */; };
+		37D400FF2B6A689700D7D709 /* AboutViewControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400FE2B6A689700D7D709 /* AboutViewControllerCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +55,6 @@
 		37D400932B696CE100D7D709 /* sharVPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sharVPN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D400962B696CE100D7D709 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37D400982B696CE100D7D709 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		37D4009A2B696CE100D7D709 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		37D4009F2B696CE300D7D709 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37D400A22B696CE300D7D709 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37D400A42B696CE300D7D709 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,6 +72,15 @@
 		37D400DD2B69811C00D7D709 /* NeuropolX.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NeuropolX.ttf; path = "../../../../../../Downloads/Neuropol X 2/NeuropolX.ttf"; sourceTree = "<group>"; };
 		37D400DF2B698EC700D7D709 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		37D400E12B698F4E00D7D709 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		37D400E82B6A5BE400D7D709 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		37D400EC2B6A5C1800D7D709 /* MainViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerModel.swift; sourceTree = "<group>"; };
+		37D400EE2B6A5C2B00D7D709 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		37D400F22B6A5C4700D7D709 /* AboutViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewControllerModel.swift; sourceTree = "<group>"; };
+		37D400F52B6A5C8A00D7D709 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		37D400F72B6A5DC800D7D709 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		37D400F92B6A5E0700D7D709 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		37D400FC2B6A5EE400D7D709 /* MainViewControllerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerCoordinator.swift; sourceTree = "<group>"; };
+		37D400FE2B6A689700D7D709 /* AboutViewControllerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewControllerCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +131,10 @@
 		37D400952B696CE100D7D709 /* sharVPN */ = {
 			isa = PBXGroup;
 			children = (
+				37D400F42B6A5C7B00D7D709 /* Coordinators */,
+				37D400E32B6A523100D7D709 /* Application */,
 				37D400C62B6972A100D7D709 /* Resources */,
-				37D400962B696CE100D7D709 /* AppDelegate.swift */,
-				37D400982B696CE100D7D709 /* SceneDelegate.swift */,
-				37D4009A2B696CE100D7D709 /* ViewController.swift */,
+				37D400E52B6A5BA400D7D709 /* Core */,
 				37D4009F2B696CE300D7D709 /* Assets.xcassets */,
 				37D400A12B696CE300D7D709 /* LaunchScreen.storyboard */,
 				37D400A42B696CE300D7D709 /* Info.plist */,
@@ -189,6 +205,86 @@
 				37D400DF2B698EC700D7D709 /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		37D400E32B6A523100D7D709 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				37D400962B696CE100D7D709 /* AppDelegate.swift */,
+				37D400982B696CE100D7D709 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		37D400E52B6A5BA400D7D709 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				37D400E62B6A5BAA00D7D709 /* Main */,
+				37D400E72B6A5BB200D7D709 /* About */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		37D400E62B6A5BAA00D7D709 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				37D400EB2B6A5BFC00D7D709 /* ViewModel */,
+				37D400EA2B6A5BF000D7D709 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		37D400E72B6A5BB200D7D709 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				37D400F12B6A5C3400D7D709 /* ViewModel */,
+				37D400F02B6A5C2E00D7D709 /* View */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		37D400EA2B6A5BF000D7D709 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37D400E82B6A5BE400D7D709 /* MainViewController.swift */,
+				37D400FC2B6A5EE400D7D709 /* MainViewControllerCoordinator.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		37D400EB2B6A5BFC00D7D709 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				37D400EC2B6A5C1800D7D709 /* MainViewControllerModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		37D400F02B6A5C2E00D7D709 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37D400EE2B6A5C2B00D7D709 /* AboutViewController.swift */,
+				37D400FE2B6A689700D7D709 /* AboutViewControllerCoordinator.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		37D400F12B6A5C3400D7D709 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				37D400F22B6A5C4700D7D709 /* AboutViewControllerModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		37D400F42B6A5C7B00D7D709 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				37D400F52B6A5C8A00D7D709 /* Coordinator.swift */,
+				37D400F72B6A5DC800D7D709 /* BaseCoordinator.swift */,
+				37D400F92B6A5E0700D7D709 /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,11 +423,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37D4009B2B696CE100D7D709 /* ViewController.swift in Sources */,
+				37D400E92B6A5BE400D7D709 /* MainViewController.swift in Sources */,
+				37D400FA2B6A5E0700D7D709 /* AppCoordinator.swift in Sources */,
 				37D400972B696CE100D7D709 /* AppDelegate.swift in Sources */,
+				37D400F82B6A5DC800D7D709 /* BaseCoordinator.swift in Sources */,
+				37D400EF2B6A5C2B00D7D709 /* AboutViewController.swift in Sources */,
+				37D400FF2B6A689700D7D709 /* AboutViewControllerCoordinator.swift in Sources */,
 				37D400D22B69742700D7D709 /* UIFont+Extension.swift in Sources */,
 				37D400E22B698F4E00D7D709 /* AppColors.swift in Sources */,
+				37D400F62B6A5C8A00D7D709 /* Coordinator.swift in Sources */,
+				37D400F32B6A5C4700D7D709 /* AboutViewControllerModel.swift in Sources */,
+				37D400ED2B6A5C1800D7D709 /* MainViewControllerModel.swift in Sources */,
 				37D400992B696CE100D7D709 /* SceneDelegate.swift in Sources */,
+				37D400FD2B6A5EE400D7D709 /* MainViewControllerCoordinator.swift in Sources */,
 				37D400E02B698EC700D7D709 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
