@@ -22,6 +22,11 @@ final class TabBarController: UITabBarController {
         super.init(coder: aDecoder)
         createControllers()
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        editAppereance()
+    }
 
     
     
@@ -35,5 +40,9 @@ extension TabBarController {
         
         viewControllers = [mainCoordinator.navigationController,
                            aboutCoordinator.navigationController]
+    }
+    
+    func editAppereance() {
+        tabBar.setup()
     }
 }
