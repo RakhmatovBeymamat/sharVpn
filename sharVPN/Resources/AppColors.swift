@@ -7,13 +7,13 @@
 
 import UIKit
 
-enum AppColors {
-    static let titleColor = UIColor().hex(0x5E6282)
-    static let startGradientColor = UIColor().hex(0x4776E6)
-    static let endGradientColor = UIColor().hex(0x8E54E9)
-    static let navBarButtonColor = UIColor().hex(0xF957A4)
-    static let tabBarItemColor = UIColor().hex(0x4A4D54)
-    static let inputBgColor = UIColor().hex(0xECECEC)
-    static let inputImgColor = UIColor().hex(0xB6B6B6)
-    static let black = UIColor().hex(0x000000)
+enum AppColors: String {
+    case darkBlue
+    case darkPink
+    case grey
+    case lightBlack
+    case lightBlue
+    case lightGrey
+    case mainBackground
+    case lightPink
 }
