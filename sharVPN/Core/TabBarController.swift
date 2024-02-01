@@ -1,5 +1,5 @@
 //
-//  AboutViewController.swift
+//  TabBarController.swift
 //  sharVPN
 //
 //  Created by Rakhmatov Beymamat on 31.01.24.
@@ -7,13 +7,13 @@
 
 import UIKit
 
-class AboutViewController: UIViewController {
+class TabBarController: UITabBarController {
     
-    private var viewModel: AboutViewControllerModel
-        
-    init(viewModel: AboutViewControllerModel) {
-        self.viewModel = viewModel
+    init(tabBarControlles: [UIViewController]) {
         super.init(nibName: nil, bundle: nil)
+        for tab in tabBarControlles {
+            self.addChild(tab)
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -22,7 +22,8 @@ class AboutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
+
+
     }
 
 }

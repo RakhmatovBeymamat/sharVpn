@@ -27,11 +27,9 @@
 		37D400ED2B6A5C1800D7D709 /* MainViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400EC2B6A5C1800D7D709 /* MainViewControllerModel.swift */; };
 		37D400EF2B6A5C2B00D7D709 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400EE2B6A5C2B00D7D709 /* AboutViewController.swift */; };
 		37D400F32B6A5C4700D7D709 /* AboutViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400F22B6A5C4700D7D709 /* AboutViewControllerModel.swift */; };
-		37D400F62B6A5C8A00D7D709 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400F52B6A5C8A00D7D709 /* Coordinator.swift */; };
-		37D400F82B6A5DC800D7D709 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400F72B6A5DC800D7D709 /* BaseCoordinator.swift */; };
 		37D400FA2B6A5E0700D7D709 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400F92B6A5E0700D7D709 /* AppCoordinator.swift */; };
-		37D400FD2B6A5EE400D7D709 /* MainViewControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400FC2B6A5EE400D7D709 /* MainViewControllerCoordinator.swift */; };
-		37D400FF2B6A689700D7D709 /* AboutViewControllerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400FE2B6A689700D7D709 /* AboutViewControllerCoordinator.swift */; };
+		37D401012B6A942E00D7D709 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D401002B6A942E00D7D709 /* Resources.swift */; };
+		37D401032B6AE52000D7D709 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D401022B6AE52000D7D709 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,11 +74,9 @@
 		37D400EC2B6A5C1800D7D709 /* MainViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerModel.swift; sourceTree = "<group>"; };
 		37D400EE2B6A5C2B00D7D709 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		37D400F22B6A5C4700D7D709 /* AboutViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewControllerModel.swift; sourceTree = "<group>"; };
-		37D400F52B6A5C8A00D7D709 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		37D400F72B6A5DC800D7D709 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		37D400F92B6A5E0700D7D709 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		37D400FC2B6A5EE400D7D709 /* MainViewControllerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerCoordinator.swift; sourceTree = "<group>"; };
-		37D400FE2B6A689700D7D709 /* AboutViewControllerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewControllerCoordinator.swift; sourceTree = "<group>"; };
+		37D401002B6A942E00D7D709 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		37D401022B6AE52000D7D709 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +161,7 @@
 				37D400D02B6973F400D7D709 /* Extensions */,
 				37D400C72B6972B700D7D709 /* Fonts */,
 				37D400E12B698F4E00D7D709 /* AppColors.swift */,
+				37D401002B6A942E00D7D709 /* Resources.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -221,6 +218,7 @@
 			children = (
 				37D400E62B6A5BAA00D7D709 /* Main */,
 				37D400E72B6A5BB200D7D709 /* About */,
+				37D401022B6AE52000D7D709 /* TabBarController.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -247,7 +245,6 @@
 			isa = PBXGroup;
 			children = (
 				37D400E82B6A5BE400D7D709 /* MainViewController.swift */,
-				37D400FC2B6A5EE400D7D709 /* MainViewControllerCoordinator.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -264,7 +261,6 @@
 			isa = PBXGroup;
 			children = (
 				37D400EE2B6A5C2B00D7D709 /* AboutViewController.swift */,
-				37D400FE2B6A689700D7D709 /* AboutViewControllerCoordinator.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -280,8 +276,6 @@
 		37D400F42B6A5C7B00D7D709 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				37D400F52B6A5C8A00D7D709 /* Coordinator.swift */,
-				37D400F72B6A5DC800D7D709 /* BaseCoordinator.swift */,
 				37D400F92B6A5E0700D7D709 /* AppCoordinator.swift */,
 			);
 			path = Coordinators;
@@ -424,18 +418,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				37D400E92B6A5BE400D7D709 /* MainViewController.swift in Sources */,
+				37D401032B6AE52000D7D709 /* TabBarController.swift in Sources */,
 				37D400FA2B6A5E0700D7D709 /* AppCoordinator.swift in Sources */,
 				37D400972B696CE100D7D709 /* AppDelegate.swift in Sources */,
-				37D400F82B6A5DC800D7D709 /* BaseCoordinator.swift in Sources */,
+				37D401012B6A942E00D7D709 /* Resources.swift in Sources */,
 				37D400EF2B6A5C2B00D7D709 /* AboutViewController.swift in Sources */,
-				37D400FF2B6A689700D7D709 /* AboutViewControllerCoordinator.swift in Sources */,
 				37D400D22B69742700D7D709 /* UIFont+Extension.swift in Sources */,
 				37D400E22B698F4E00D7D709 /* AppColors.swift in Sources */,
-				37D400F62B6A5C8A00D7D709 /* Coordinator.swift in Sources */,
 				37D400F32B6A5C4700D7D709 /* AboutViewControllerModel.swift in Sources */,
 				37D400ED2B6A5C1800D7D709 /* MainViewControllerModel.swift in Sources */,
 				37D400992B696CE100D7D709 /* SceneDelegate.swift in Sources */,
-				37D400FD2B6A5EE400D7D709 /* MainViewControllerCoordinator.swift in Sources */,
 				37D400E02B698EC700D7D709 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
