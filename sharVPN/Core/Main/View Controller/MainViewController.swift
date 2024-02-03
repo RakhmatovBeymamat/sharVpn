@@ -7,97 +7,117 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, ViewSpecificController {
     
+    //MARK: - RootView
+    typealias RootView = MainView
     
-    //fileprivate var backgroundImageView = UIImageView(image: UIImage(named: Localize.Images.background))
-    var coordinator: MainViewCoordinator?
+    //MARK: - Services
+    internal var coordinator: MainViewCoordinator?
 
+    
+    @IBAction func enableButtonAction(_ sender: Any) {
+        print("Works")
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .appColor(.lightPink)
-//        setupBackground()
-//        titleLabel()
-//        setupNavAddBtn()
+        
+        
         
     }
     
-    //MARK: - Метод для создание title в главном экране
-    private func titleLabel() {
-        let label = UILabel()
-        label.text = "ШАР"
-        label.translatesAutoresizingMaskIntoConstraints = false
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
         
-        view.addSubview(label)
+        setupPlusBtn()
+        setupAddKeyBtn()
         
-        NSLayoutConstraint.activate([
-            label.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
-            label.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 11),
-        ])
-        
-        label.font = .Neuropol.neuropol.size(of: 64)
-//        label.textColor = AppColors.titleColor
-    }
-    
-    //MARK: - Метод для создание кнопка добавить круглая
-    private func setupNavAddBtn() {
-        let preViewBtn = circle(frame: CGSize(width: 45, height: 45), background: .white.withAlphaComponent(0.7))
-        preViewBtn.layer.shadowColor = UIColor(red: 40/255, green: 43/255, blue: 111/255, alpha: 0.15).cgColor
-        preViewBtn.layer.shadowOpacity = 1.0
-        preViewBtn.layer.shadowOffset = CGSize(width: 0, height: 8.5)
-        preViewBtn.layer.shadowRadius = 38.5
-        preViewBtn.layer.shadowPath = UIBezierPath(roundedRect: preViewBtn.bounds, cornerRadius: preViewBtn.frame.width / 2).cgPath
-        
-        let viewBtn = circle(frame: CGSize(width: 32, height: 32), background: .white)
-        viewBtn.layer.shadowColor = UIColor(red: 40/255, green: 43/255, blue: 111/255, alpha: 0.15).cgColor
-        viewBtn.layer.shadowOpacity = 1.0
-        viewBtn.layer.shadowOffset = CGSize(width: 0, height: 8)
-        viewBtn.layer.shadowRadius = 39
-        viewBtn.layer.shadowPath = UIBezierPath(roundedRect: viewBtn.bounds, cornerRadius: viewBtn.frame.width / 2).cgPath
-        
-        preViewBtn.translatesAutoresizingMaskIntoConstraints = false
-        viewBtn.translatesAutoresizingMaskIntoConstraints = false
-            
-        view.addSubview(preViewBtn)
-        preViewBtn.addSubview(viewBtn)
-            
-        
-        // Определение констрейнтов для customView
-        NSLayoutConstraint.activate([
-            preViewBtn.widthAnchor.constraint(equalToConstant: 45),
-            preViewBtn.heightAnchor.constraint(equalToConstant: 45),
-            preViewBtn.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
-            preViewBtn.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12),
-            
-            viewBtn.centerXAnchor.constraint(equalTo: preViewBtn.centerXAnchor),
-            viewBtn.centerYAnchor.constraint(equalTo: preViewBtn.centerYAnchor),
-            viewBtn.widthAnchor.constraint(equalToConstant: 32),
-            viewBtn.heightAnchor.constraint(equalToConstant: 32)
-        ])
-    }
-    
-    private func setupBackground() {
-//        backgroundImageView.contentMode = .scaleAspectFit
-//        view.addSubview(backgroundImageView)
-//        backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.activate([
-//            backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor),
-//            backgroundImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-//            backgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-//            backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-//        ])
     }
 }
-
-
+    
 extension MainViewController {
-    private func circle(frame: CGSize, background: UIColor) -> UIView {
-        let circle = UIView()
-        circle.backgroundColor = background
-        circle.frame.size = frame
-        circle.layer.cornerRadius = frame.width / 2
-        return circle
+    private func apperanceSettings() {
+
+    }
+    
+    private func setupPlusBtn() {
+        let buttonSize = view().plusButton.bounds.size
+        
+        let backgroundLayer = circle(size: buttonSize, color: UIColor.white.withAlphaComponent(0.7).cgColor)
+        
+        let backgroundSize = CGSize(width: buttonSize.width * 0.8, height: buttonSize.height * 0.8)
+        let backgroundOrigin = CGPoint(x: (buttonSize.width - backgroundSize.width) / 2, y: (buttonSize.height - backgroundSize.height) / 2)
+        let background = circle(size: backgroundSize, color: UIColor.white.cgColor)
+        background.position = CGPoint(x: backgroundLayer.position.x + backgroundOrigin.x - (buttonSize.width - backgroundSize.width) / 2, y: backgroundLayer.position.y + backgroundOrigin.y - (buttonSize.height - backgroundSize.height) / 2)
+        
+        let iconImageView = UIImageView(image: UIImage(systemName: "plus"))
+        iconImageView.tintColor = .appColor(.lightPink)
+        iconImageView.center = CGPoint(x: buttonSize.width / 2, y: buttonSize.height / 2)
+        
+        view().plusButton.layer.addSublayer(backgroundLayer)
+        view().plusButton.layer.addSublayer(background)
+        view().plusButton.addSubview(iconImageView)
+    }
+
+    
+    private func setupAddKeyBtn() {
+        
+        
+        lazy var gradientLayer: CAGradientLayer = {
+            let l = CAGradientLayer()
+            l.frame = view().addKeyButton.bounds
+            l.colors = [UIColor.appColor(.lightBlue), UIColor.appColor(.darkPink)]
+            l.startPoint = CGPoint(x: 0, y: 0.5)
+            l.endPoint = CGPoint(x: 1, y: 0.5)
+            l.cornerRadius = 40
+            view().addKeyButton.layer.insertSublayer(l, at: 0)
+            return l
+        }()
+        
+        gradientLayer.frame = view().addKeyButton.bounds
+        view().addKeyButton.layer.cornerRadius = 40
+        
+        setupCustomTextButton()
+        
+    }
+
+    private func circle(size: CGSize, color: CGColor) -> CALayer {
+        let layer = CALayer()
+        layer.bounds = CGRect(origin: .zero, size: size)
+        layer.position = CGPoint(x: size.width / 2, y: size.height / 2)
+        layer.cornerRadius = size.width / 2
+        layer.backgroundColor = color
+        
+        return layer
+    }
+    
+    private func setupCustomTextButton() {
+        
+        let attributedText = NSMutableAttributedString(string: "Добавить ключ ШАР")
+        
+        // Атрибуты для слова "Добавить ключ"
+        let addKeyAttributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont.MontserratAlternates.medium.size(of: 22),
+            .foregroundColor: UIColor.white
+        ]
+        attributedText.addAttributes(addKeyAttributes, range: NSRange(location: 0, length: 13))
+        
+        // Атрибуты для слова "ШАР"
+        let sharAttributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont.Neuropol.neuropol.size(of: 22),
+            .foregroundColor: UIColor.white
+        ]
+        attributedText.addAttributes(sharAttributes, range: NSRange(location: 14, length: 3))
+        
+        view().addKeyButton.setAttributedTitle(attributedText, for: .normal)
+        
     }
 }
+
+
 
 

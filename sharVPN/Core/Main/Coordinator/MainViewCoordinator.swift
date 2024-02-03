@@ -8,8 +8,8 @@
 import UIKit
 
 final class MainViewCoordinator: Coordinator {
-    var childCoordinators: [Coordinator] = []
-    var navigationController: UINavigationController
+    internal var childCoordinators: [Coordinator] = []
+    internal var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -17,11 +17,10 @@ final class MainViewCoordinator: Coordinator {
     
     func start() {
         let vc = MainViewController()
-        vc.tabBarItem = UITabBarItem(title: Localize.TabBar.vpn, image: .appImage(.tabBarVpn), selectedImage: .appImage(.tabBarVpn))
-        vc.tabBarItem.tag = 0
+        vc.tabBarItem =  UITabBarItem(title: Localize.TabBar.vpn, image: UIImage.appImage(.tabBarVpn), tag: 0)
+        vc.tabBarItem.setImageOnly()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
+        
     }
-    
-    
 }

@@ -10,4 +10,5 @@ import Foundation
 enum AppImages: String {
     case tabBarAbout
     case tabBarVpn
+    case ballNoActiv
 }

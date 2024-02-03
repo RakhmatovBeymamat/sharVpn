@@ -18,8 +18,8 @@ final class AboutViewCoordinator: Coordinator {
     
     func start() {
         let vc = AboutViewController()
-        vc.tabBarItem = UITabBarItem(title: Localize.TabBar.about, image: .appImage(.tabBarAbout), selectedImage: .appImage(.tabBarAbout))
-        vc.tabBarItem.tag = 0
+        vc.tabBarItem = UITabBarItem(title: Localize.TabBar.about, image: .appImage(.tabBarAbout), tag: 1)
+        vc.tabBarItem.setImageOnly()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
     }
