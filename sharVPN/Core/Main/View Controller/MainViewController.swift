@@ -6,6 +6,13 @@
 //
 
 import UIKit
+import OutlineTunnel
+import OutlineSentryLogger
+import OutlineNotification
+import CocoaLumberjack
+import CocoaLumberjackSwift
+import NetworkExtension
+import Sentry
 
 class MainViewController: UIViewController, ViewSpecificController {
     
@@ -14,18 +21,28 @@ class MainViewController: UIViewController, ViewSpecificController {
     
     //MARK: - Services
     internal var coordinator: MainViewCoordinator?
+    private let vpn = OutlineVpn.shared
+    let configJson: [String: Any]? = [
+        "host": "91.215.152.217",
+        "port": 8388,
+        "username": "aes-256-gcm",
+        "password": 888999
+    ]
 
     
     @IBAction func enableButtonAction(_ sender: Any) {
-        print("Works")
+        guard let configJson = configJson, containsExpectedKeys(configJson) else { return }
+        vpn.start("0", configJson: configJson) { errorCode in
+            if errorCode == .noError {
+                print("VPN tunnel started successfully")
+            } else {
+                print("Failed to start VPN tunnel. Error code: \(errorCode.rawValue)")
+            }
+        }
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         
     }
     
@@ -42,6 +59,11 @@ class MainViewController: UIViewController, ViewSpecificController {
 extension MainViewController {
     private func apperanceSettings() {
 
+    }
+    
+    private func containsExpectedKeys(_ configJson: [String: Any]?) -> Bool {
+        return configJson?["host"] != nil && configJson?["port"] != nil &&
+        configJson?["password"] != nil && configJson?["method"] != nil
     }
     
     private func setupPlusBtn() {
