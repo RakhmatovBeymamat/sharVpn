@@ -47,7 +47,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3LG-BD-Fo5">
-                            <rect key="frame" x="15" y="70" width="201.5" height="90"/>
+                            <rect key="frame" x="12" y="70" width="201.5" height="90"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ШАР" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9C-aC-82f">
                                     <rect key="frame" x="0.0" y="0.0" width="201.5" height="90"/>
@@ -80,7 +80,7 @@
                     <color key="backgroundColor" name="mainBackground"/>
                     <constraints>
                         <constraint firstItem="axi-5u-xPz" firstAttribute="top" secondItem="4Y4-56-wti" secondAttribute="top" id="0sV-2Q-jsO"/>
-                        <constraint firstItem="3LG-BD-Fo5" firstAttribute="leading" secondItem="4Y4-56-wti" secondAttribute="leading" constant="15" id="3KX-mP-Hr6"/>
+                        <constraint firstItem="3LG-BD-Fo5" firstAttribute="leading" secondItem="4Y4-56-wti" secondAttribute="leading" constant="12" id="3KX-mP-Hr6"/>
                         <constraint firstItem="axi-5u-xPz" firstAttribute="leading" secondItem="4Y4-56-wti" secondAttribute="leading" id="82Z-sw-Wxz"/>
                         <constraint firstItem="3LG-BD-Fo5" firstAttribute="top" secondItem="4Y4-56-wti" secondAttribute="top" constant="70" id="979-OM-ilg"/>
                         <constraint firstAttribute="bottom" secondItem="axi-5u-xPz" secondAttribute="bottom" id="FYI-Pt-dtq"/>

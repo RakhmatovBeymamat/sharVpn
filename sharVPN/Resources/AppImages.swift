@@ -11,4 +11,7 @@ enum AppImages: String {
     case tabBarAbout
     case tabBarVpn
     case ballNoActiv
+    case emailIcon
+    case supportChatIcon
+    case telegramIcon
 }

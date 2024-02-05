@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AboutView: CustomView {
-
-
+final class AboutView: CustomView {
+        
+    
 }
