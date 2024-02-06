@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import OutlineTunnel
+import Tun2socks
 
 class MainViewController: UIViewController, ViewSpecificController {
     
@@ -36,6 +38,12 @@ class MainViewController: UIViewController, ViewSpecificController {
         setupPlusBtn()
         setupAddKeyBtn()
         
+    }
+    
+    func test() {
+        var config = ShadowsocksConfig()
+        var client = ShadowsocksClient(config)
+        var tunnel = Tun2socksTunnel()
     }
 }
     
