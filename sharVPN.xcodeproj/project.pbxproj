@@ -30,9 +30,6 @@
 		37B7F7392B71D0A50084B0F7 /* OutlineAppleLib in Frameworks */ = {isa = PBXBuildFile; productRef = 37B7F7382B71D0A50084B0F7 /* OutlineAppleLib */; };
 		37B7F73B2B71D0A50084B0F7 /* OutlineLauncher in Frameworks */ = {isa = PBXBuildFile; productRef = 37B7F73A2B71D0A50084B0F7 /* OutlineLauncher */; };
 		37B7F73D2B71D0A50084B0F7 /* PacketTunnelProvider in Frameworks */ = {isa = PBXBuildFile; productRef = 37B7F73C2B71D0A50084B0F7 /* PacketTunnelProvider */; };
-		37B7F7452B71D3C20084B0F7 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B7F7442B71D3C20084B0F7 /* NetworkExtension.framework */; };
-		37B7F7482B71D3C20084B0F7 /* AppProxyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B7F7472B71D3C20084B0F7 /* AppProxyProvider.swift */; };
-		37B7F74D2B71D3C20084B0F7 /* NEtarget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 37B7F7422B71D3C20084B0F7 /* NEtarget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		37B7F7572B71DB3E0084B0F7 /* MontserratAlternates-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37B7F7522B71DB3E0084B0F7 /* MontserratAlternates-Medium.ttf */; };
 		37B7F7582B71DB3E0084B0F7 /* MontserratAlternates-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37B7F7532B71DB3E0084B0F7 /* MontserratAlternates-SemiBold.ttf */; };
 		37B7F7592B71DB3E0084B0F7 /* MontserratAlternates-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37B7F7542B71DB3E0084B0F7 /* MontserratAlternates-Bold.ttf */; };
@@ -56,13 +53,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		37B7F74B2B71D3C20084B0F7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 37D4008B2B696CE100D7D709 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 37B7F7412B71D3C20084B0F7;
-			remoteInfo = NEtarget;
-		};
 		37D400AA2B696CE300D7D709 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 37D4008B2B696CE100D7D709 /* Project object */;
@@ -86,7 +76,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				37B7F74D2B71D3C20084B0F7 /* NEtarget.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,11 +103,6 @@
 		372D292E2B6D32A000066EA1 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
 		373766AE2B70AFA900373296 /* ContactsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableCell.swift; sourceTree = "<group>"; };
 		373766AF2B70AFA900373296 /* ContactsTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactsTableCell.xib; sourceTree = "<group>"; };
-		37B7F7422B71D3C20084B0F7 /* NEtarget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NEtarget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		37B7F7442B71D3C20084B0F7 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
-		37B7F7472B71D3C20084B0F7 /* AppProxyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProxyProvider.swift; sourceTree = "<group>"; };
-		37B7F7492B71D3C20084B0F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		37B7F74A2B71D3C20084B0F7 /* NEtarget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NEtarget.entitlements; sourceTree = "<group>"; };
 		37B7F7522B71DB3E0084B0F7 /* MontserratAlternates-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Medium.ttf"; sourceTree = "<group>"; };
 		37B7F7532B71DB3E0084B0F7 /* MontserratAlternates-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-SemiBold.ttf"; sourceTree = "<group>"; };
 		37B7F7542B71DB3E0084B0F7 /* MontserratAlternates-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Bold.ttf"; sourceTree = "<group>"; };
@@ -142,14 +126,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		37B7F73F2B71D3C20084B0F7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				37B7F7452B71D3C20084B0F7 /* NetworkExtension.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		37D400902B696CE100D7D709 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -264,32 +240,12 @@
 			path = ContactsCell;
 			sourceTree = "<group>";
 		};
-		37B7F7432B71D3C20084B0F7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				37B7F7442B71D3C20084B0F7 /* NetworkExtension.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		37B7F7462B71D3C20084B0F7 /* NEtarget */ = {
-			isa = PBXGroup;
-			children = (
-				37B7F7472B71D3C20084B0F7 /* AppProxyProvider.swift */,
-				37B7F7492B71D3C20084B0F7 /* Info.plist */,
-				37B7F74A2B71D3C20084B0F7 /* NEtarget.entitlements */,
-			);
-			path = NEtarget;
-			sourceTree = "<group>";
-		};
 		37D4008A2B696CE100D7D709 = {
 			isa = PBXGroup;
 			children = (
 				37D400952B696CE100D7D709 /* sharVPN */,
 				37D400AC2B696CE300D7D709 /* sharVPNTests */,
 				37D400B62B696CE300D7D709 /* sharVPNUITests */,
-				37B7F7462B71D3C20084B0F7 /* NEtarget */,
-				37B7F7432B71D3C20084B0F7 /* Frameworks */,
 				37D400942B696CE100D7D709 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -300,7 +256,6 @@
 				37D400932B696CE100D7D709 /* sharVPN.app */,
 				37D400A92B696CE300D7D709 /* sharVPNTests.xctest */,
 				37D400B32B696CE300D7D709 /* sharVPNUITests.xctest */,
-				37B7F7422B71D3C20084B0F7 /* NEtarget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -451,23 +406,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		37B7F7412B71D3C20084B0F7 /* NEtarget */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 37B7F74E2B71D3C20084B0F7 /* Build configuration list for PBXNativeTarget "NEtarget" */;
-			buildPhases = (
-				37B7F73E2B71D3C20084B0F7 /* Sources */,
-				37B7F73F2B71D3C20084B0F7 /* Frameworks */,
-				37B7F7402B71D3C20084B0F7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = NEtarget;
-			productName = NEtarget;
-			productReference = 37B7F7422B71D3C20084B0F7 /* NEtarget.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		37D400922B696CE100D7D709 /* sharVPN */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37D400BD2B696CE300D7D709 /* Build configuration list for PBXNativeTarget "sharVPN" */;
@@ -480,7 +418,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				37B7F74C2B71D3C20084B0F7 /* PBXTargetDependency */,
 			);
 			name = sharVPN;
 			packageProductDependencies = (
@@ -542,9 +479,6 @@
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
-					37B7F7412B71D3C20084B0F7 = {
-						CreatedOnToolsVersion = 15.2;
-					};
 					37D400922B696CE100D7D709 = {
 						CreatedOnToolsVersion = 15.2;
 					};
@@ -578,19 +512,11 @@
 				37D400922B696CE100D7D709 /* sharVPN */,
 				37D400A82B696CE300D7D709 /* sharVPNTests */,
 				37D400B22B696CE300D7D709 /* sharVPNUITests */,
-				37B7F7412B71D3C20084B0F7 /* NEtarget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		37B7F7402B71D3C20084B0F7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		37D400912B696CE100D7D709 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -626,14 +552,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		37B7F73E2B71D3C20084B0F7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				37B7F7482B71D3C20084B0F7 /* AppProxyProvider.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		37D4008F2B696CE100D7D709 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -683,11 +601,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		37B7F74C2B71D3C20084B0F7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 37B7F7412B71D3C20084B0F7 /* NEtarget */;
-			targetProxy = 37B7F74B2B71D3C20084B0F7 /* PBXContainerItemProxy */;
-		};
 		37D400AB2B696CE300D7D709 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 37D400922B696CE100D7D709 /* sharVPN */;
@@ -712,60 +625,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		37B7F74F2B71D3C20084B0F7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = NEtarget/NEtarget.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Y9GCU93VT4;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NEtarget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = NEtarget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rakhmatov.sharVpn.NEtarget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		37B7F7502B71D3C20084B0F7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = NEtarget/NEtarget.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Y9GCU93VT4;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NEtarget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = NEtarget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rakhmatov.sharVpn.NEtarget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		37D400BB2B696CE300D7D709 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1022,15 +881,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		37B7F74E2B71D3C20084B0F7 /* Build configuration list for PBXNativeTarget "NEtarget" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				37B7F74F2B71D3C20084B0F7 /* Debug */,
-				37B7F7502B71D3C20084B0F7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		37D4008E2B696CE100D7D709 /* Build configuration list for PBXProject "sharVPN" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
