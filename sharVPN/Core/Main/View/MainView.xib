@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -32,10 +33,13 @@
                         <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="bG7-83-1kQ">
                             <rect key="frame" x="12" y="170" width="348" height="223"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4A-k7-OS1">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4A-k7-OS1">
                                     <rect key="frame" x="0.0" y="0.0" width="348" height="223"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="ballNoActiv"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="ballNoActiv" title=" "/>
+                                    <connections>
+                                        <action selector="enableButtonAction:" destination="-1" eventType="touchUpInside" id="Ry7-Sl-QzT"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -67,7 +71,7 @@
                                 <constraint firstAttribute="bottom" secondItem="E9C-aC-82f" secondAttribute="bottom" id="zhm-uB-Xhk"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgh-Ld-EmV">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgh-Ld-EmV">
                             <rect key="frame" x="318" y="61" width="45" height="45"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="45" id="5Fq-CY-jvD"/>

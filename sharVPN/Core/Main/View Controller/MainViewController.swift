@@ -31,6 +31,7 @@ class MainViewController: UIViewController, ViewSpecificController {
 
     
     @IBAction func enableButtonAction(_ sender: Any) {
+        print("test")
         guard let configJson = configJson, containsExpectedKeys(configJson) else { return }
         vpn.start("0", configJson: configJson) { errorCode in
             if errorCode == .noError {
@@ -43,7 +44,7 @@ class MainViewController: UIViewController, ViewSpecificController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("tunnel: \(vpn.isActive("0"))")
     }
     
     override func viewWillAppear(_ animated: Bool) {
