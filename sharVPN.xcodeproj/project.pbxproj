@@ -27,9 +27,6 @@
 		372D292F2B6D32A000066EA1 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 372D292E2B6D32A000066EA1 /* MainView.xib */; };
 		373766B02B70AFA900373296 /* ContactsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373766AE2B70AFA900373296 /* ContactsTableCell.swift */; };
 		373766B12B70AFA900373296 /* ContactsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 373766AF2B70AFA900373296 /* ContactsTableCell.xib */; };
-		3799FE502B7175A500AD1DC0 /* OutlineAppleLib in Frameworks */ = {isa = PBXBuildFile; productRef = 3799FE4F2B7175A500AD1DC0 /* OutlineAppleLib */; };
-		3799FE522B7175A500AD1DC0 /* OutlineLauncher in Frameworks */ = {isa = PBXBuildFile; productRef = 3799FE512B7175A500AD1DC0 /* OutlineLauncher */; };
-		3799FE542B7175A500AD1DC0 /* PacketTunnelProvider in Frameworks */ = {isa = PBXBuildFile; productRef = 3799FE532B7175A500AD1DC0 /* PacketTunnelProvider */; };
 		37D400972B696CE100D7D709 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400962B696CE100D7D709 /* AppDelegate.swift */; };
 		37D400A02B696CE300D7D709 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37D4009F2B696CE300D7D709 /* Assets.xcassets */; };
 		37D400A32B696CE300D7D709 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D400A12B696CE300D7D709 /* LaunchScreen.storyboard */; };
@@ -113,9 +110,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3799FE502B7175A500AD1DC0 /* OutlineAppleLib in Frameworks */,
-				3799FE522B7175A500AD1DC0 /* OutlineLauncher in Frameworks */,
-				3799FE542B7175A500AD1DC0 /* PacketTunnelProvider in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,9 +393,6 @@
 			);
 			name = sharVPN;
 			packageProductDependencies = (
-				3799FE4F2B7175A500AD1DC0 /* OutlineAppleLib */,
-				3799FE512B7175A500AD1DC0 /* OutlineLauncher */,
-				3799FE532B7175A500AD1DC0 /* PacketTunnelProvider */,
 			);
 			productName = sharVPN;
 			productReference = 37D400932B696CE100D7D709 /* sharVPN.app */;
@@ -476,7 +467,6 @@
 			);
 			mainGroup = 37D4008A2B696CE100D7D709;
 			packageReferences = (
-				3799FE4E2B7175A500AD1DC0 /* XCRemoteSwiftPackageReference "Outline-SPM" */,
 			);
 			productRefGroup = 37D400942B696CE100D7D709 /* Products */;
 			projectDirPath = "";
@@ -887,35 +877,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		3799FE4E2B7175A500AD1DC0 /* XCRemoteSwiftPackageReference "Outline-SPM" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Negative3103/Outline-SPM";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		3799FE4F2B7175A500AD1DC0 /* OutlineAppleLib */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3799FE4E2B7175A500AD1DC0 /* XCRemoteSwiftPackageReference "Outline-SPM" */;
-			productName = OutlineAppleLib;
-		};
-		3799FE512B7175A500AD1DC0 /* OutlineLauncher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3799FE4E2B7175A500AD1DC0 /* XCRemoteSwiftPackageReference "Outline-SPM" */;
-			productName = OutlineLauncher;
-		};
-		3799FE532B7175A500AD1DC0 /* PacketTunnelProvider */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3799FE4E2B7175A500AD1DC0 /* XCRemoteSwiftPackageReference "Outline-SPM" */;
-			productName = PacketTunnelProvider;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 37D4008B2B696CE100D7D709 /* Project object */;
 }
