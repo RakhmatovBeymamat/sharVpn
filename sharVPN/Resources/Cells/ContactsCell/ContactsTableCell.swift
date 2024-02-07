@@ -7,18 +7,10 @@
 
 import UIKit
 
+//Ячейка для первой таблицы в AboutView
 class ContactsTableCell: UITableViewCell {
     
     static let identifier = "contactsCell"
-    
-    static func nib() -> UINib {
-        return UINib(nibName: "ContactsTableCell", bundle: nil)
-    }
-    
-    public func configure(with title: String, image: UIImage) {
-        cellLabel.text = title
-        cellIcon.image = image
-    }
 
     @IBOutlet weak var cellIcon: UIImageView!
     @IBOutlet weak var cellLabel: UILabel!
@@ -39,6 +31,18 @@ class ContactsTableCell: UITableViewCell {
         
     }
     
+}
+
+
+extension ContactsTableCell {
+    static func nib() -> UINib {
+        return UINib(nibName: "ContactsTableCell", bundle: nil)
+    }
+    
+    public func configure(with title: String, image: UIImage) {
+        cellLabel.text = title
+        cellIcon.image = image
+    }
 }
 
 struct ContactsTableData {

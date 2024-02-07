@@ -27,9 +27,6 @@
 		372D292F2B6D32A000066EA1 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 372D292E2B6D32A000066EA1 /* MainView.xib */; };
 		373766B02B70AFA900373296 /* ContactsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373766AE2B70AFA900373296 /* ContactsTableCell.swift */; };
 		373766B12B70AFA900373296 /* ContactsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 373766AF2B70AFA900373296 /* ContactsTableCell.xib */; };
-		37B7F7392B71D0A50084B0F7 /* OutlineAppleLib in Frameworks */ = {isa = PBXBuildFile; productRef = 37B7F7382B71D0A50084B0F7 /* OutlineAppleLib */; };
-		37B7F73B2B71D0A50084B0F7 /* OutlineLauncher in Frameworks */ = {isa = PBXBuildFile; productRef = 37B7F73A2B71D0A50084B0F7 /* OutlineLauncher */; };
-		37B7F73D2B71D0A50084B0F7 /* PacketTunnelProvider in Frameworks */ = {isa = PBXBuildFile; productRef = 37B7F73C2B71D0A50084B0F7 /* PacketTunnelProvider */; };
 		37B7F7572B71DB3E0084B0F7 /* MontserratAlternates-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37B7F7522B71DB3E0084B0F7 /* MontserratAlternates-Medium.ttf */; };
 		37B7F7582B71DB3E0084B0F7 /* MontserratAlternates-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37B7F7532B71DB3E0084B0F7 /* MontserratAlternates-SemiBold.ttf */; };
 		37B7F7592B71DB3E0084B0F7 /* MontserratAlternates-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37B7F7542B71DB3E0084B0F7 /* MontserratAlternates-Bold.ttf */; };
@@ -134,9 +131,6 @@
 				D1A1B3622B70FFAE0058EBAF /* PacketTunnelProvider in Frameworks */,
 				D1A1B35B2B70FF660058EBAF /* SwiftMessages in Frameworks */,
 				D1A1B3602B70FFAE0058EBAF /* OutlineLauncher in Frameworks */,
-				37B7F7392B71D0A50084B0F7 /* OutlineAppleLib in Frameworks */,
-				37B7F73B2B71D0A50084B0F7 /* OutlineLauncher in Frameworks */,
-				37B7F73D2B71D0A50084B0F7 /* PacketTunnelProvider in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,9 +419,6 @@
 				D1A1B35D2B70FFAE0058EBAF /* OutlineAppleLib */,
 				D1A1B35F2B70FFAE0058EBAF /* OutlineLauncher */,
 				D1A1B3612B70FFAE0058EBAF /* PacketTunnelProvider */,
-				37B7F7382B71D0A50084B0F7 /* OutlineAppleLib */,
-				37B7F73A2B71D0A50084B0F7 /* OutlineLauncher */,
-				37B7F73C2B71D0A50084B0F7 /* PacketTunnelProvider */,
 			);
 			productName = sharVPN;
 			productReference = 37D400932B696CE100D7D709 /* sharVPN.app */;
@@ -503,7 +494,7 @@
 			mainGroup = 37D4008A2B696CE100D7D709;
 			packageReferences = (
 				D1A1B3592B70FF660058EBAF /* XCRemoteSwiftPackageReference "SwiftMessages" */,
-				37B7F7372B71D0A50084B0F7 /* XCRemoteSwiftPackageReference "Outline-SPM" */,
+				37B7F7622B733A100084B0F7 /* XCRemoteSwiftPackageReference "Outline-SPM" */,
 			);
 			productRefGroup = 37D400942B696CE100D7D709 /* Products */;
 			projectDirPath = "";
@@ -920,7 +911,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		37B7F7372B71D0A50084B0F7 /* XCRemoteSwiftPackageReference "Outline-SPM" */ = {
+		37B7F7622B733A100084B0F7 /* XCRemoteSwiftPackageReference "Outline-SPM" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Negative3103/Outline-SPM";
 			requirement = {
@@ -939,21 +930,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		37B7F7382B71D0A50084B0F7 /* OutlineAppleLib */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 37B7F7372B71D0A50084B0F7 /* XCRemoteSwiftPackageReference "Outline-SPM" */;
-			productName = OutlineAppleLib;
-		};
-		37B7F73A2B71D0A50084B0F7 /* OutlineLauncher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 37B7F7372B71D0A50084B0F7 /* XCRemoteSwiftPackageReference "Outline-SPM" */;
-			productName = OutlineLauncher;
-		};
-		37B7F73C2B71D0A50084B0F7 /* PacketTunnelProvider */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 37B7F7372B71D0A50084B0F7 /* XCRemoteSwiftPackageReference "Outline-SPM" */;
-			productName = PacketTunnelProvider;
-		};
 		D1A1B35A2B70FF660058EBAF /* SwiftMessages */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D1A1B3592B70FF660058EBAF /* XCRemoteSwiftPackageReference "SwiftMessages" */;
