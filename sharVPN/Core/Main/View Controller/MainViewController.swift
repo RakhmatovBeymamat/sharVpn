@@ -22,6 +22,20 @@ class MainViewController: UIViewController, ViewSpecificController {
     //MARK: - Services
     internal var coordinator: MainViewCoordinator?
     private let vpn = OutlineVpn.shared
+    var animationLayer: CALayer!
+
+    func startAnimation() {
+        view().arrowImageView.isHidden = false
+        let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+        rotationAnimation.toValue = NSNumber(value: Double.pi * 2) // 360 градусов в радианах
+        rotationAnimation.duration = 1.0 // Продолжительность анимации в секундах
+        rotationAnimation.isCumulative = true
+        rotationAnimation.repeatCount = Float.greatestFiniteMagnitude // Бесконечное повторение
+        
+        // Добавляем анимацию к слою изображения кнопки
+        view().arrowImageView.layer.add(rotationAnimation, forKey: "rotationAnimation")
+    }
+    
     let configJson: [String: Any]? = [
         "host": "91.215.152.217",
         "port": 8388,
@@ -32,6 +46,7 @@ class MainViewController: UIViewController, ViewSpecificController {
     
     @IBAction func enableButtonAction(_ sender: Any) {
         print("test")
+        startAnimation()
         guard let configJson = configJson, containsExpectedKeys(configJson) else { return }
         vpn.start("0", configJson: configJson) { errorCode in
             if errorCode == .noError {
@@ -45,6 +60,7 @@ class MainViewController: UIViewController, ViewSpecificController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("tunnel: \(vpn.isActive("0"))")
+        apperanceSettings()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -131,7 +147,7 @@ extension MainViewController {
         
         // Атрибуты для слова "ШАР"
         let sharAttributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.Neuropol.neuropol.size(of: 22),
+            .font: UIFont.MontserratAlternates.light.size(of: 22),
             .foregroundColor: UIColor.white
         ]
         attributedText.addAttributes(sharAttributes, range: NSRange(location: 14, length: 3))
@@ -139,6 +155,12 @@ extension MainViewController {
         view().addKeyButton.setAttributedTitle(attributedText, for: .normal)
         
     }
+    
+//    func animateArrow() {
+//        UIView.animate(withDuration: 2.0, delay: 0, options: [.curveLinear, .repeat], animations: {
+//            self.arrowView.transform = CGAffineTransform(rotationAngle: .pi)
+//        }, completion: nil)
+//    }
 }
 
 

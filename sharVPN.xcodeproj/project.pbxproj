@@ -32,7 +32,6 @@
 		37B7F7592B71DB3E0084B0F7 /* MontserratAlternates-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37B7F7542B71DB3E0084B0F7 /* MontserratAlternates-Bold.ttf */; };
 		37B7F75A2B71DB3E0084B0F7 /* MontserratAlternates-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37B7F7552B71DB3E0084B0F7 /* MontserratAlternates-Regular.ttf */; };
 		37B7F75B2B71DB3E0084B0F7 /* MontserratAlternates-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37B7F7562B71DB3E0084B0F7 /* MontserratAlternates-Light.ttf */; };
-		37B7F7612B7337910084B0F7 /* NeuropolX.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37B7F7602B7337910084B0F7 /* NeuropolX.ttf */; };
 		37D400972B696CE100D7D709 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400962B696CE100D7D709 /* AppDelegate.swift */; };
 		37D400A02B696CE300D7D709 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37D4009F2B696CE300D7D709 /* Assets.xcassets */; };
 		37D400A32B696CE300D7D709 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D400A12B696CE300D7D709 /* LaunchScreen.storyboard */; };
@@ -105,7 +104,6 @@
 		37B7F7542B71DB3E0084B0F7 /* MontserratAlternates-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Bold.ttf"; sourceTree = "<group>"; };
 		37B7F7552B71DB3E0084B0F7 /* MontserratAlternates-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Regular.ttf"; sourceTree = "<group>"; };
 		37B7F7562B71DB3E0084B0F7 /* MontserratAlternates-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Light.ttf"; sourceTree = "<group>"; };
-		37B7F7602B7337910084B0F7 /* NeuropolX.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NeuropolX.ttf; path = "../../../../../../Downloads/Neuropol X 6/NeuropolX.ttf"; sourceTree = "<group>"; };
 		37D400932B696CE100D7D709 /* sharVPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sharVPN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D400962B696CE100D7D709 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37D4009F2B696CE300D7D709 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -323,7 +321,6 @@
 		37D400CE2B69730900D7D709 /* NeuropolX */ = {
 			isa = PBXGroup;
 			children = (
-				37B7F7602B7337910084B0F7 /* NeuropolX.ttf */,
 			);
 			path = NeuropolX;
 			sourceTree = "<group>";
@@ -516,7 +513,6 @@
 				37B7F7592B71DB3E0084B0F7 /* MontserratAlternates-Bold.ttf in Resources */,
 				37B7F7582B71DB3E0084B0F7 /* MontserratAlternates-SemiBold.ttf in Resources */,
 				37D400A32B696CE300D7D709 /* LaunchScreen.storyboard in Resources */,
-				37B7F7612B7337910084B0F7 /* NeuropolX.ttf in Resources */,
 				37B7F75B2B71DB3E0084B0F7 /* MontserratAlternates-Light.ttf in Resources */,
 				37D400A02B696CE300D7D709 /* Assets.xcassets in Resources */,
 				373766B12B70AFA900373296 /* ContactsTableCell.xib in Resources */,
@@ -743,7 +739,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Y9GCU93VT4;
+				DEVELOPMENT_TEAM = G82BQXGANZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sharVPN/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -756,7 +752,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rakhmatov.sharVpn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.negativ.sharVpn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -772,7 +768,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Y9GCU93VT4;
+				DEVELOPMENT_TEAM = G82BQXGANZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sharVPN/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -785,7 +781,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rakhmatov.sharVpn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.negativ.sharVpn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
