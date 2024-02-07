@@ -33,6 +33,12 @@ class ContactsTableCell: UITableViewCell {
 
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        
+    }
+    
 }
 
 struct ContactsTableData {
