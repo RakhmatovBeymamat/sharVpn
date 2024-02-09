@@ -52,9 +52,7 @@ struct ContactsTableData {
     
     static func data() -> [ContactsTableData] {
         return [
-            ContactsTableData(text: "Чат со службой заботы", image: .appImage(.supportChatIcon)),
-            ContactsTableData(text: "Telegram:", image: .appImage(.telegramIcon)),
-            ContactsTableData(text: "E-mail:  sharvpn@gmail.com ", image: .appImage(.emailIcon))
+            ContactsTableData(text: "Служба заботы: sharvpn@gmail.com", image: .appImage(.emailIcon))
         ]
     }
 }

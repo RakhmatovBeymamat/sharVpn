@@ -9,5 +9,7 @@ import UIKit
 
 final class AboutView: CustomView {
         
-    
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var versionLabel: UILabel!
+    @IBOutlet weak var aboutLabel: UILabel!
 }

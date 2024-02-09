@@ -2,12 +2,17 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="MontserratAlternates-Medium.ttf">
+            <string>MontserratAlternates-Medium</string>
+        </array>
         <array key="MontserratAlternates-SemiBold.ttf">
             <string>MontserratAlternates-SemiBold</string>
         </array>
@@ -19,6 +24,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutViewController" customModule="sharVPN" customModuleProvider="target">
             <connections>
                 <outlet property="contactsTableView" destination="flP-I6-g4p" id="Tsn-cy-1hj"/>
+                <outlet property="licenseTableView" destination="5Sr-Qq-RJ9" id="bEq-CK-6hq"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,46 +34,75 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ШАР" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWK-jl-8bW">
-                    <rect key="frame" x="12" y="67" width="369" height="77"/>
+                    <rect key="frame" x="12" y="62" width="369" height="77"/>
                     <fontDescription key="fontDescription" name="NeuropolXRg-Regular" family="Neuropol X" pointSize="64"/>
                     <color key="textColor" name="darkBlue"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lk-lb-QIy">
-                    <rect key="frame" x="12" y="152" width="369" height="29.333333333333343"/>
-                    <fontDescription key="fontDescription" name="MontserratAlternates-SemiBold" family="Montserrat Alternates" pointSize="24"/>
+                    <rect key="frame" x="12" y="147" width="369" height="20"/>
+                    <fontDescription key="fontDescription" name="MontserratAlternates-SemiBold" family="Montserrat Alternates" pointSize="16"/>
                     <color key="textColor" name="grey"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="flP-I6-g4p">
-                    <rect key="frame" x="12" y="193.33333333333337" width="369" height="196"/>
+                <tableView clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" scrollEnabled="NO" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="flP-I6-g4p">
+                    <rect key="frame" x="12" y="175" width="369" height="60"/>
+                    <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="196" id="PCk-oY-YQk"/>
+                        <constraint firstAttribute="height" constant="60" id="d7n-5d-HO2"/>
                     </constraints>
                     <connections>
                         <outlet property="dataSource" destination="i5M-Pr-FkT" id="Xht-Of-DEf"/>
                         <outlet property="delegate" destination="i5M-Pr-FkT" id="6eB-R1-0Wc"/>
                     </connections>
                 </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5Sr-Qq-RJ9">
+                    <rect key="frame" x="12" y="640" width="369" height="150"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="MUI-XY-dvo"/>
+                    </constraints>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8f-DG-ee1">
+                    <rect key="frame" x="12" y="548" width="369" height="72"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="72" id="d8v-Tk-Muk"/>
+                    </constraints>
+                    <string key="text">ШАР работает на основе Outline, 
+разработанным командой Jigsaw. Это программа с открытым исходным кодом, использующая протокол Shadowsocks.</string>
+                    <fontDescription key="fontDescription" name="MontserratAlternates-Medium" family="Montserrat Alternates" pointSize="12"/>
+                    <color key="textColor" name="lightBlack"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="mainBackground"/>
             <constraints>
-                <constraint firstItem="flP-I6-g4p" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="02K-YV-EL5"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="flP-I6-g4p" secondAttribute="trailing" constant="12" id="0nG-WP-09N"/>
-                <constraint firstItem="7lk-lb-QIy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="Keo-gD-P9B"/>
-                <constraint firstItem="7lk-lb-QIy" firstAttribute="top" secondItem="VWK-jl-8bW" secondAttribute="bottom" constant="8" id="LLV-V7-Btg"/>
-                <constraint firstItem="VWK-jl-8bW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="PcB-gh-4E7"/>
-                <constraint firstItem="VWK-jl-8bW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="mQR-c7-SOJ"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7lk-lb-QIy" secondAttribute="trailing" constant="12" id="noW-6Z-21z"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VWK-jl-8bW" secondAttribute="trailing" constant="12" id="oSw-uX-TZk"/>
-                <constraint firstItem="flP-I6-g4p" firstAttribute="top" secondItem="7lk-lb-QIy" secondAttribute="bottom" constant="12" id="v43-nO-BFp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5Sr-Qq-RJ9" secondAttribute="trailing" constant="12" id="2Qh-2q-tC6"/>
+                <constraint firstItem="5Sr-Qq-RJ9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="2m5-3V-eKF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="y8f-DG-ee1" secondAttribute="trailing" constant="12" id="6m5-3W-9Mw"/>
+                <constraint firstItem="7lk-lb-QIy" firstAttribute="trailing" secondItem="VWK-jl-8bW" secondAttribute="trailing" id="Cjb-iG-H9d"/>
+                <constraint firstItem="7lk-lb-QIy" firstAttribute="trailing" secondItem="flP-I6-g4p" secondAttribute="trailing" id="E9I-66-aLZ"/>
+                <constraint firstItem="7lk-lb-QIy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="147" id="ECr-xY-xxW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="5Sr-Qq-RJ9" secondAttribute="bottom" constant="28" id="GBP-F9-Xwp"/>
+                <constraint firstItem="7lk-lb-QIy" firstAttribute="top" secondItem="VWK-jl-8bW" secondAttribute="bottom" constant="8" id="KGX-fw-4Qo"/>
+                <constraint firstItem="7lk-lb-QIy" firstAttribute="leading" secondItem="5Sr-Qq-RJ9" secondAttribute="leading" id="QjZ-KU-Un7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="flP-I6-g4p" secondAttribute="trailing" constant="12" id="RXP-r0-hYb"/>
+                <constraint firstItem="7lk-lb-QIy" firstAttribute="leading" secondItem="VWK-jl-8bW" secondAttribute="leading" id="VpH-gl-CSN"/>
+                <constraint firstItem="y8f-DG-ee1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="aJI-bO-Pud"/>
+                <constraint firstItem="5Sr-Qq-RJ9" firstAttribute="top" secondItem="y8f-DG-ee1" secondAttribute="bottom" constant="20" id="iGa-fx-0mY"/>
+                <constraint firstItem="flP-I6-g4p" firstAttribute="top" secondItem="7lk-lb-QIy" secondAttribute="bottom" constant="8" id="kxG-rb-enM"/>
+                <constraint firstItem="flP-I6-g4p" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="mm0-Wr-yj2"/>
+                <constraint firstItem="7lk-lb-QIy" firstAttribute="trailing" secondItem="5Sr-Qq-RJ9" secondAttribute="trailing" id="myV-ui-Maj"/>
+                <constraint firstItem="7lk-lb-QIy" firstAttribute="leading" secondItem="flP-I6-g4p" secondAttribute="leading" id="xKb-3F-lJ3"/>
             </constraints>
+            <connections>
+                <outlet property="aboutLabel" destination="y8f-DG-ee1" id="4lb-Xm-0lm"/>
+                <outlet property="title" destination="VWK-jl-8bW" id="tkD-Mm-ZCP"/>
+                <outlet property="versionLabel" destination="7lk-lb-QIy" id="ioP-h6-yhC"/>
+            </connections>
             <point key="canvasLocation" x="53" y="21"/>
         </view>
-        <tableViewController id="jPF-pO-EyO">
-            <point key="canvasLocation" x="837" y="12"/>
-        </tableViewController>
     </objects>
     <resources>
         <namedColor name="darkBlue">
@@ -76,8 +111,14 @@
         <namedColor name="grey">
             <color red="0.71399998664855957" green="0.71399998664855957" blue="0.71399998664855957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="lightBlack">
+            <color red="0.2901961207" green="0.30196079609999998" blue="0.32941177490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <namedColor name="mainBackground">
             <color red="0.97600001096725464" green="0.97600001096725464" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

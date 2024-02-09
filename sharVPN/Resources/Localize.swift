@@ -12,4 +12,12 @@ enum Localize {
         static var vpn = "VPN"
         static var about = "О приложении"
     }
+    
+    enum MainViewLoc {
+        static var title = "ШАР"
+    }
+    
+    enum AboutViewLoc {
+        static var aboutText = "ШАР работает на основе Outline, разработанным командой Jigsaw. Это программа с открытым исходным кодом, использующая протокол Shadowsocks."
+    }
 }

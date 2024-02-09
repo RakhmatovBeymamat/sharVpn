@@ -13,8 +13,13 @@ import CocoaLumberjack
 import CocoaLumberjackSwift
 import NetworkExtension
 import Sentry
+import SwiftMessages
 
 class MainViewController: UIViewController, ViewSpecificController {
+    
+    //test mainViewModel methods
+    let viewModel = MainViewModel()
+    let ssURL = "ss://YWVzLTI1Ni1nY206ODg4OTk5@91.215.152.217:8388#%D1%82%D0%B5%D1%81%D1"
     
     //MARK: - RootView
     typealias RootView = MainView
@@ -57,10 +62,25 @@ class MainViewController: UIViewController, ViewSpecificController {
         }
     }
     
+    @IBAction func addKeyBtn(_ sender: Any) {
+        print("working")
+        showAddKeyView()
+        
+        if let test = viewModel.parseShadowsocksURL(ssURL) {
+            print("")
+            print("---------------------------------")
+            print("Server: - \(test.host)")
+            print("Port: - \(test.port)")
+            print("Method: - \(test.encryptionMethod)")
+            print("Password: - \(test.password)")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("tunnel: \(vpn.isActive("0"))")
         apperanceSettings()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -74,8 +94,10 @@ class MainViewController: UIViewController, ViewSpecificController {
 }
     
 extension MainViewController {
+    
     private func apperanceSettings() {
-
+        view().titleLabel.text = Localize.MainViewLoc.title
+        view().titleLabel.font = UIFont.Neuropol.neuropol.size(of: 64)
     }
     
     private func containsExpectedKeys(_ configJson: [String: Any]?) -> Bool {
@@ -83,6 +105,7 @@ extension MainViewController {
         configJson?["password"] != nil && configJson?["method"] != nil
     }
     
+    //MARK: - Настройка круглой кнопки
     private func setupPlusBtn() {
         let buttonSize = view().plusButton.bounds.size
         
@@ -104,8 +127,6 @@ extension MainViewController {
 
     
     private func setupAddKeyBtn() {
-        
-        
         lazy var gradientLayer: CAGradientLayer = {
             let l = CAGradientLayer()
             l.frame = view().addKeyButton.bounds
@@ -121,7 +142,6 @@ extension MainViewController {
         view().addKeyButton.layer.cornerRadius = 40
         
         setupCustomTextButton()
-        
     }
 
     private func circle(size: CGSize, color: CGColor) -> CALayer {
@@ -147,12 +167,30 @@ extension MainViewController {
         
         // Атрибуты для слова "ШАР"
         let sharAttributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.MontserratAlternates.light.size(of: 22),
+            .font: UIFont.Neuropol.neuropol.size(of: 22),
             .foregroundColor: UIColor.white
         ]
         attributedText.addAttributes(sharAttributes, range: NSRange(location: 14, length: 3))
         
         view().addKeyButton.setAttributedTitle(attributedText, for: .normal)
+        
+    }
+    
+    private func showAddKeyView() {
+        
+        guard let customView = Bundle.main.loadNibNamed("AddKeyPopUpView", owner: nil, options: nil)?.first as? AddKeyPopUpView else {return}
+        customView.backgroundColor = .appColor(.mainBackground)
+        customView.input.placeholder = "Vvedite klyuch"
+        
+        var config = SwiftMessages.Config()
+        config.presentationStyle = .bottom
+        config.duration = .forever
+        config.interactiveHide = true
+        config.presentationContext = .window(windowLevel: UIWindow.Level.statusBar)
+        
+        SwiftMessages.show(config: config, view: customView)
+        
+        
         
     }
     
