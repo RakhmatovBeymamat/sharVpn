@@ -163,7 +163,7 @@ extension MainViewController {
         attributedText.addAttributes(addKeyAttributes, range: NSRange(location: 0, length: 13))
         
         let sharAttributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.Neuropol.neuropol.size(of: 22),
+            .font: UIFont.MontserratAlternates.light.size(of: 22),
             .foregroundColor: UIColor.white
         ]
         attributedText.addAttributes(sharAttributes, range: NSRange(location: 14, length: 3))
