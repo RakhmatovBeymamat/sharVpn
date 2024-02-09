@@ -27,28 +27,17 @@ class MainViewController: UIViewController, ViewSpecificController {
     //MARK: - Services
     internal var coordinator: MainViewCoordinator?
     private let vpn = OutlineVpn.shared
-    var animationLayer: CALayer!
-
-    func startAnimation() {
-        view().arrowImageView.isHidden = false
-        let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
-        rotationAnimation.toValue = NSNumber(value: Double.pi * 2) // 360 градусов в радианах
-        rotationAnimation.duration = 1.0 // Продолжительность анимации в секундах
-        rotationAnimation.isCumulative = true
-        rotationAnimation.repeatCount = Float.greatestFiniteMagnitude // Бесконечное повторение
-        
-        // Добавляем анимацию к слою изображения кнопки
-        view().arrowImageView.layer.add(rotationAnimation, forKey: "rotationAnimation")
-    }
+    private var animationLayer: CALayer!
     
-    let configJson: [String: Any]? = [
+    //MARK: - Attributes
+    private let configJson: [String: Any]? = [
         "host": "91.215.152.217",
         "port": 8388,
         "username": "aes-256-gcm",
         "password": 888999
     ]
-
     
+    //MARK: - Actions
     @IBAction func enableButtonAction(_ sender: Any) {
         print("test")
         startAnimation()
@@ -64,37 +53,28 @@ class MainViewController: UIViewController, ViewSpecificController {
     
     @IBAction func addKeyBtn(_ sender: Any) {
         print("working")
-        showAddKeyView()
-        
-        if let test = viewModel.parseShadowsocksURL(ssURL) {
-            print("")
-            print("---------------------------------")
-            print("Server: - \(test.host)")
-            print("Port: - \(test.port)")
-            print("Method: - \(test.encryptionMethod)")
-            print("Password: - \(test.password)")
-        }
+        coordinator?.presentAddView(viewController: self)
+        parseSSURl(url: ssURL)
     }
     
+    
+    //MARK: - Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
         print("tunnel: \(vpn.isActive("0"))")
         apperanceSettings()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
-        
         setupPlusBtn()
         setupAddKeyBtn()
-        
     }
 }
-    
+
+//MARK: - Other funcs
 extension MainViewController {
-    
     private func apperanceSettings() {
         view().titleLabel.text = Localize.MainViewLoc.title
         view().titleLabel.font = UIFont.Neuropol.neuropol.size(of: 64)
@@ -102,7 +82,28 @@ extension MainViewController {
     
     private func containsExpectedKeys(_ configJson: [String: Any]?) -> Bool {
         return configJson?["host"] != nil && configJson?["port"] != nil &&
-        configJson?["password"] != nil && configJson?["method"] != nil
+        configJson?["password"] != nil && configJson?["username"] != nil
+    }
+    
+    private func startAnimation() {
+        view().arrowImageView.isHidden = false
+        let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+        rotationAnimation.toValue = NSNumber(value: Double.pi * 2)
+        rotationAnimation.duration = 1.0
+        rotationAnimation.isCumulative = true
+        rotationAnimation.repeatCount = Float.greatestFiniteMagnitude
+        view().arrowImageView.layer.add(rotationAnimation, forKey: "rotationAnimation")
+    }
+    
+    private func parseSSURl(url: String) {
+        if let test = viewModel.parseShadowsocksURL(url) {
+            print("")
+            print("---------------------------------")
+            print("Server: - \(test.host)")
+            print("Port: - \(test.port)")
+            print("Method: - \(test.encryptionMethod)")
+            print("Password: - \(test.password)")
+        }
     }
     
     //MARK: - Настройка круглой кнопки
@@ -124,7 +125,7 @@ extension MainViewController {
         view().plusButton.layer.addSublayer(background)
         view().plusButton.addSubview(iconImageView)
     }
-
+    
     
     private func setupAddKeyBtn() {
         lazy var gradientLayer: CAGradientLayer = {
@@ -143,29 +144,24 @@ extension MainViewController {
         
         setupCustomTextButton()
     }
-
+    
     private func circle(size: CGSize, color: CGColor) -> CALayer {
         let layer = CALayer()
         layer.bounds = CGRect(origin: .zero, size: size)
         layer.position = CGPoint(x: size.width / 2, y: size.height / 2)
         layer.cornerRadius = size.width / 2
         layer.backgroundColor = color
-        
         return layer
     }
     
     private func setupCustomTextButton() {
-        
         let attributedText = NSMutableAttributedString(string: "Добавить ключ ШАР")
-        
-        // Атрибуты для слова "Добавить ключ"
         let addKeyAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.MontserratAlternates.medium.size(of: 22),
             .foregroundColor: UIColor.white
         ]
         attributedText.addAttributes(addKeyAttributes, range: NSRange(location: 0, length: 13))
         
-        // Атрибуты для слова "ШАР"
         let sharAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.Neuropol.neuropol.size(of: 22),
             .foregroundColor: UIColor.white
@@ -173,34 +169,19 @@ extension MainViewController {
         attributedText.addAttributes(sharAttributes, range: NSRange(location: 14, length: 3))
         
         view().addKeyButton.setAttributedTitle(attributedText, for: .normal)
-        
     }
     
-    private func showAddKeyView() {
-        
-        guard let customView = Bundle.main.loadNibNamed("AddKeyPopUpView", owner: nil, options: nil)?.first as? AddKeyPopUpView else {return}
-        customView.backgroundColor = .appColor(.mainBackground)
-        customView.input.placeholder = "Vvedite klyuch"
-        
-        var config = SwiftMessages.Config()
-        config.presentationStyle = .bottom
-        config.duration = .forever
-        config.interactiveHide = true
-        config.presentationContext = .window(windowLevel: UIWindow.Level.statusBar)
-        
-        SwiftMessages.show(config: config, view: customView)
-        
-        
-        
-    }
-    
-//    func animateArrow() {
-//        UIView.animate(withDuration: 2.0, delay: 0, options: [.curveLinear, .repeat], animations: {
-//            self.arrowView.transform = CGAffineTransform(rotationAngle: .pi)
-//        }, completion: nil)
-//    }
+    //    func animateArrow() {
+    //        UIView.animate(withDuration: 2.0, delay: 0, options: [.curveLinear, .repeat], animations: {
+    //            self.arrowView.transform = CGAffineTransform(rotationAngle: .pi)
+    //        }, completion: nil)
+    //    }
 }
 
-
-
+//MARK: - AddKeyPopUpViewControllerDelegate
+extension MainViewController: AddKeyPopUpViewControllerDelegate {
+    func didFinishKey(key: String) {
+        parseSSURl(url: key)
+    }
+}
 

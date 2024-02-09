@@ -27,7 +27,6 @@
 		372D292F2B6D32A000066EA1 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 372D292E2B6D32A000066EA1 /* MainView.xib */; };
 		373766B02B70AFA900373296 /* ContactsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373766AE2B70AFA900373296 /* ContactsTableCell.swift */; };
 		373766B12B70AFA900373296 /* ContactsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 373766AF2B70AFA900373296 /* ContactsTableCell.xib */; };
-		37A1E4342B746BBC001A716B /* NeuropolX.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37A1E4332B746BB3001A716B /* NeuropolX.ttf */; };
 		37A1E43C2B74705E001A716B /* LicenseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1E43A2B74705E001A716B /* LicenseTableCell.swift */; };
 		37A1E43D2B74705E001A716B /* LicenseTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37A1E43B2B74705E001A716B /* LicenseTableCell.xib */; };
 		37A1E4402B758330001A716B /* AddKeyPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1E43F2B758330001A716B /* AddKeyPopUpView.swift */; };
@@ -51,6 +50,8 @@
 		D1A1B35E2B70FFAE0058EBAF /* OutlineAppleLib in Frameworks */ = {isa = PBXBuildFile; productRef = D1A1B35D2B70FFAE0058EBAF /* OutlineAppleLib */; };
 		D1A1B3602B70FFAE0058EBAF /* OutlineLauncher in Frameworks */ = {isa = PBXBuildFile; productRef = D1A1B35F2B70FFAE0058EBAF /* OutlineLauncher */; };
 		D1A1B3622B70FFAE0058EBAF /* PacketTunnelProvider in Frameworks */ = {isa = PBXBuildFile; productRef = D1A1B3612B70FFAE0058EBAF /* PacketTunnelProvider */; };
+		D1D401622B75E9AE00358D18 /* AddKeyPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D401612B75E9AE00358D18 /* AddKeyPopUpViewController.swift */; };
+		D1D401642B75EA5900358D18 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D401632B75EA5900358D18 /* AlertViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,7 +105,6 @@
 		372D292E2B6D32A000066EA1 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
 		373766AE2B70AFA900373296 /* ContactsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableCell.swift; sourceTree = "<group>"; };
 		373766AF2B70AFA900373296 /* ContactsTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactsTableCell.xib; sourceTree = "<group>"; };
-		37A1E4332B746BB3001A716B /* NeuropolX.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NeuropolX.ttf; path = "../../../../../../Downloads/Neuropol X/NeuropolX.ttf"; sourceTree = "<group>"; };
 		37A1E43A2B74705E001A716B /* LicenseTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseTableCell.swift; sourceTree = "<group>"; };
 		37A1E43B2B74705E001A716B /* LicenseTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LicenseTableCell.xib; sourceTree = "<group>"; };
 		37A1E43F2B758330001A716B /* AddKeyPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKeyPopUpView.swift; sourceTree = "<group>"; };
@@ -128,6 +128,8 @@
 		37D400E12B698F4E00D7D709 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		37D400E82B6A5BE400D7D709 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		37D400EE2B6A5C2B00D7D709 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		D1D401612B75E9AE00358D18 /* AddKeyPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKeyPopUpViewController.swift; sourceTree = "<group>"; };
+		D1D401632B75EA5900358D18 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 			children = (
 				372D29002B6BF8A200066EA1 /* Coordinator.swift */,
 				372D29162B6D11C200066EA1 /* ViewSpecificController.swift */,
+				D1D401632B75EA5900358D18 /* AlertViewController.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -255,8 +258,8 @@
 		37A1E43E2B758311001A716B /* AddKeyPopUpView */ = {
 			isa = PBXGroup;
 			children = (
-				37A1E43F2B758330001A716B /* AddKeyPopUpView.swift */,
-				37A1E4412B75833D001A716B /* AddKeyPopUpView.xib */,
+				D1D401602B75E9A000358D18 /* View Controller */,
+				D1D4015F2B75E99600358D18 /* View */,
 			);
 			path = AddKeyPopUpView;
 			sourceTree = "<group>";
@@ -350,7 +353,6 @@
 		37D400CE2B69730900D7D709 /* NeuropolX */ = {
 			isa = PBXGroup;
 			children = (
-				37A1E4332B746BB3001A716B /* NeuropolX.ttf */,
 			);
 			path = NeuropolX;
 			sourceTree = "<group>";
@@ -423,6 +425,31 @@
 				372D29292B6D17F900066EA1 /* AboutView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D1D4015E2B75E98900358D18 /* Root View */ = {
+			isa = PBXGroup;
+			children = (
+				37A1E43F2B758330001A716B /* AddKeyPopUpView.swift */,
+				37A1E4412B75833D001A716B /* AddKeyPopUpView.xib */,
+			);
+			path = "Root View";
+			sourceTree = "<group>";
+		};
+		D1D4015F2B75E99600358D18 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D1D4015E2B75E98900358D18 /* Root View */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D1D401602B75E9A000358D18 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D1D401612B75E9AE00358D18 /* AddKeyPopUpViewController.swift */,
+			);
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -544,7 +571,6 @@
 				37B7F7592B71DB3E0084B0F7 /* MontserratAlternates-Bold.ttf in Resources */,
 				37B7F7582B71DB3E0084B0F7 /* MontserratAlternates-SemiBold.ttf in Resources */,
 				37D400A32B696CE300D7D709 /* LaunchScreen.storyboard in Resources */,
-				37A1E4342B746BBC001A716B /* NeuropolX.ttf in Resources */,
 				37B7F75B2B71DB3E0084B0F7 /* MontserratAlternates-Light.ttf in Resources */,
 				37D400A02B696CE300D7D709 /* Assets.xcassets in Resources */,
 				373766B12B70AFA900373296 /* ContactsTableCell.xib in Resources */,
@@ -586,7 +612,9 @@
 				37D400E92B6A5BE400D7D709 /* MainViewController.swift in Sources */,
 				372D29072B6C1CD700066EA1 /* AppImages.swift in Sources */,
 				37197A3F2B6DDE7F00FE01CC /* GradientButton.swift in Sources */,
+				D1D401622B75E9AE00358D18 /* AddKeyPopUpViewController.swift in Sources */,
 				372D29012B6BF8A200066EA1 /* Coordinator.swift in Sources */,
+				D1D401642B75EA5900358D18 /* AlertViewController.swift in Sources */,
 				37D400972B696CE100D7D709 /* AppDelegate.swift in Sources */,
 				37D400EF2B6A5C2B00D7D709 /* AboutViewController.swift in Sources */,
 				372D290B2B6C326700066EA1 /* AboutViewCoordinator.swift in Sources */,
@@ -775,7 +803,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Y9GCU93VT4;
+				DEVELOPMENT_TEAM = G82BQXGANZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sharVPN/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -788,7 +816,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rakhmatov.sharVpn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.negativ.sharVpn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -804,7 +832,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Y9GCU93VT4;
+				DEVELOPMENT_TEAM = G82BQXGANZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sharVPN/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -817,7 +845,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rakhmatov.sharVpn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.negativ.sharVpn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
