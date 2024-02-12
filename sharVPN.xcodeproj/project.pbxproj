@@ -27,6 +27,7 @@
 		372D292F2B6D32A000066EA1 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 372D292E2B6D32A000066EA1 /* MainView.xib */; };
 		373766B02B70AFA900373296 /* ContactsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373766AE2B70AFA900373296 /* ContactsTableCell.swift */; };
 		373766B12B70AFA900373296 /* ContactsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 373766AF2B70AFA900373296 /* ContactsTableCell.xib */; };
+		3759BFCC2B770398009AAAC1 /* NeuropolX.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3759BFCB2B770398009AAAC1 /* NeuropolX.ttf */; };
 		37A1E43C2B74705E001A716B /* LicenseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1E43A2B74705E001A716B /* LicenseTableCell.swift */; };
 		37A1E43D2B74705E001A716B /* LicenseTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37A1E43B2B74705E001A716B /* LicenseTableCell.xib */; };
 		37A1E4402B758330001A716B /* AddKeyPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1E43F2B758330001A716B /* AddKeyPopUpView.swift */; };
@@ -46,6 +47,10 @@
 		37D400E22B698F4E00D7D709 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400E12B698F4E00D7D709 /* AppColors.swift */; };
 		37D400E92B6A5BE400D7D709 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400E82B6A5BE400D7D709 /* MainViewController.swift */; };
 		37D400EF2B6A5C2B00D7D709 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D400EE2B6A5C2B00D7D709 /* AboutViewController.swift */; };
+		37D49C832B7987E3004F7E72 /* conditions.docx in Resources */ = {isa = PBXBuildFile; fileRef = 37D49C7F2B7987E3004F7E72 /* conditions.docx */; };
+		37D49C842B7987E3004F7E72 /* politicy.docx in Resources */ = {isa = PBXBuildFile; fileRef = 37D49C802B7987E3004F7E72 /* politicy.docx */; };
+		37D49C852B7987E3004F7E72 /* dataCollection.docx in Resources */ = {isa = PBXBuildFile; fileRef = 37D49C812B7987E3004F7E72 /* dataCollection.docx */; };
+		37D49C862B7987E3004F7E72 /* attribution.docx in Resources */ = {isa = PBXBuildFile; fileRef = 37D49C822B7987E3004F7E72 /* attribution.docx */; };
 		D1A1B35B2B70FF660058EBAF /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = D1A1B35A2B70FF660058EBAF /* SwiftMessages */; };
 		D1A1B35E2B70FFAE0058EBAF /* OutlineAppleLib in Frameworks */ = {isa = PBXBuildFile; productRef = D1A1B35D2B70FFAE0058EBAF /* OutlineAppleLib */; };
 		D1A1B3602B70FFAE0058EBAF /* OutlineLauncher in Frameworks */ = {isa = PBXBuildFile; productRef = D1A1B35F2B70FFAE0058EBAF /* OutlineLauncher */; };
@@ -105,6 +110,7 @@
 		372D292E2B6D32A000066EA1 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
 		373766AE2B70AFA900373296 /* ContactsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableCell.swift; sourceTree = "<group>"; };
 		373766AF2B70AFA900373296 /* ContactsTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactsTableCell.xib; sourceTree = "<group>"; };
+		3759BFCB2B770398009AAAC1 /* NeuropolX.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeuropolX.ttf; sourceTree = "<group>"; };
 		37A1E43A2B74705E001A716B /* LicenseTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseTableCell.swift; sourceTree = "<group>"; };
 		37A1E43B2B74705E001A716B /* LicenseTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LicenseTableCell.xib; sourceTree = "<group>"; };
 		37A1E43F2B758330001A716B /* AddKeyPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKeyPopUpView.swift; sourceTree = "<group>"; };
@@ -128,6 +134,11 @@
 		37D400E12B698F4E00D7D709 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		37D400E82B6A5BE400D7D709 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		37D400EE2B6A5C2B00D7D709 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		37D49C7D2B796DCF004F7E72 /* sharVPN.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sharVPN.entitlements; sourceTree = "<group>"; };
+		37D49C7F2B7987E3004F7E72 /* conditions.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = conditions.docx; sourceTree = "<group>"; };
+		37D49C802B7987E3004F7E72 /* politicy.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = politicy.docx; sourceTree = "<group>"; };
+		37D49C812B7987E3004F7E72 /* dataCollection.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = dataCollection.docx; sourceTree = "<group>"; };
+		37D49C822B7987E3004F7E72 /* attribution.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = attribution.docx; sourceTree = "<group>"; };
 		D1D401612B75E9AE00358D18 /* AddKeyPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKeyPopUpViewController.swift; sourceTree = "<group>"; };
 		D1D401632B75EA5900358D18 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -287,6 +298,7 @@
 		37D400952B696CE100D7D709 /* sharVPN */ = {
 			isa = PBXGroup;
 			children = (
+				37D49C7D2B796DCF004F7E72 /* sharVPN.entitlements */,
 				37D400E32B6A523100D7D709 /* Application */,
 				37D400C62B6972A100D7D709 /* Resources */,
 				37D400E52B6A5BA400D7D709 /* Core */,
@@ -317,6 +329,7 @@
 		37D400C62B6972A100D7D709 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				37D49C7E2B79878C004F7E72 /* Politicy Files */,
 				3737669E2B703CC600373296 /* Cells */,
 				372D29182B6D129D00066EA1 /* Classes */,
 				372D29152B6D11AF00066EA1 /* Protocols */,
@@ -353,6 +366,7 @@
 		37D400CE2B69730900D7D709 /* NeuropolX */ = {
 			isa = PBXGroup;
 			children = (
+				3759BFCB2B770398009AAAC1 /* NeuropolX.ttf */,
 			);
 			path = NeuropolX;
 			sourceTree = "<group>";
@@ -425,6 +439,17 @@
 				372D29292B6D17F900066EA1 /* AboutView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		37D49C7E2B79878C004F7E72 /* Politicy Files */ = {
+			isa = PBXGroup;
+			children = (
+				37D49C822B7987E3004F7E72 /* attribution.docx */,
+				37D49C7F2B7987E3004F7E72 /* conditions.docx */,
+				37D49C812B7987E3004F7E72 /* dataCollection.docx */,
+				37D49C802B7987E3004F7E72 /* politicy.docx */,
+			);
+			path = "Politicy Files";
 			sourceTree = "<group>";
 		};
 		D1D4015E2B75E98900358D18 /* Root View */ = {
@@ -572,10 +597,15 @@
 				37B7F7582B71DB3E0084B0F7 /* MontserratAlternates-SemiBold.ttf in Resources */,
 				37D400A32B696CE300D7D709 /* LaunchScreen.storyboard in Resources */,
 				37B7F75B2B71DB3E0084B0F7 /* MontserratAlternates-Light.ttf in Resources */,
+				37D49C852B7987E3004F7E72 /* dataCollection.docx in Resources */,
 				37D400A02B696CE300D7D709 /* Assets.xcassets in Resources */,
+				37D49C862B7987E3004F7E72 /* attribution.docx in Resources */,
 				373766B12B70AFA900373296 /* ContactsTableCell.xib in Resources */,
 				37A1E43D2B74705E001A716B /* LicenseTableCell.xib in Resources */,
 				372D292F2B6D32A000066EA1 /* MainView.xib in Resources */,
+				37D49C832B7987E3004F7E72 /* conditions.docx in Resources */,
+				37D49C842B7987E3004F7E72 /* politicy.docx in Resources */,
+				3759BFCC2B770398009AAAC1 /* NeuropolX.ttf in Resources */,
 				37B7F75A2B71DB3E0084B0F7 /* MontserratAlternates-Regular.ttf in Resources */,
 				37B7F7572B71DB3E0084B0F7 /* MontserratAlternates-Medium.ttf in Resources */,
 				37A1E4422B75833D001A716B /* AddKeyPopUpView.xib in Resources */,
@@ -801,9 +831,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = sharVPN/sharVPN.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = G82BQXGANZ;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = E564BQU86C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sharVPN/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -816,8 +849,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.negativ.sharVpn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sharVpn.vpnApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "SharVPN Development";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -830,9 +865,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = sharVPN/sharVPN.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = G82BQXGANZ;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = E564BQU86C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sharVPN/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -845,8 +883,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.negativ.sharVpn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sharVpn.vpnApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "SharVPN Distribution";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

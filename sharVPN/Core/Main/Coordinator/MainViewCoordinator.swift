@@ -14,6 +14,7 @@ final class MainViewCoordinator: Coordinator {
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
+        navigationController.setNavigationBarHidden(true, animated: false)
     }
     
     internal func start() {
@@ -27,13 +28,17 @@ final class MainViewCoordinator: Coordinator {
     internal func presentAddView(viewController: UIViewController) {
         let vc = AddKeyPopUpViewController()
         vc.coordinator = self
+        
         if let viewController = viewController as? MainViewController {
             vc.delegate = viewController
         }
         let segue = SwiftMessagesSegue(identifier: nil, source: viewController, destination: vc)
-        segue.interactiveHide = false
+        segue.interactiveHide = true
+        segue.dimMode = .none
         segue.configure(layout: .bottomTab)
-        segue.messageView.backgroundHeight = 264.0
+        segue.messageView.backgroundHeight = 290
+        segue.messageView.layoutMarginAdditions = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+
         segue.perform()
     }
 }

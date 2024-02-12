@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import QuickLook
 
 class AboutViewController: UIViewController, ViewSpecificController {
     
@@ -17,10 +18,22 @@ class AboutViewController: UIViewController, ViewSpecificController {
     //MARK: - Services
     internal var coordinator: AboutViewCoordinator?
     
+    //MARK: - Attributes
+    
+    private let filesName = ["politicy",
+                             "dataCollection",
+                             "attribution",
+                             "conditions"]
+    var selectedFileName: String?
+
+
+    
     @IBOutlet weak var contactsTableView: UITableView!
 
     @IBOutlet weak var licenseTableView: UITableView!
     
+    
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         licenseTableView.register(LicenseTableCell.nib(), forCellReuseIdentifier: LicenseTableCell.identifier)
@@ -36,6 +49,7 @@ class AboutViewController: UIViewController, ViewSpecificController {
         
         getVersion()
         setupText()
+        
     }
         
     override func viewWillAppear(_ animated: Bool) {
@@ -77,6 +91,14 @@ extension AboutViewController {
         attributedString.addAttributes(att, range: shadowSocksRange)
         
         view().aboutLabel.attributedText = attributedString
+    }
+    
+    private func openFile() {
+        guard selectedFileName != nil else { return }
+        
+        let previewController = QLPreviewController()
+        previewController.dataSource = self
+        present(previewController, animated: true, completion: nil)
     }
 }
 
@@ -122,5 +144,25 @@ extension AboutViewController: UITableViewDelegate, UITableViewDataSource {
         
         return UITableViewCell()
             
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedFileName = filesName[indexPath.row]
+        tableView.deselectRow(at: indexPath, animated: true)
+        openFile()
+    }
+}
+
+extension AboutViewController: QLPreviewControllerDataSource {
+    func numberOfPreviewItems(in controller: QLPreviewController) -> Int {
+        return 1
+    }
+    
+    func previewController(_ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
+        guard let selectedFileName = selectedFileName,
+              let fileURL = Bundle.main.url(forResource: selectedFileName, withExtension: "docx") else {
+            fatalError("Could not find file: \(String(describing: selectedFileName))")
+        }
+        return fileURL as QLPreviewItem
     }
 }

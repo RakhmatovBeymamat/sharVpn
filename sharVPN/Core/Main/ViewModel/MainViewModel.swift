@@ -46,4 +46,15 @@ public class ShadowSocksData {
         self.encryptionMethod = encryptionMethod
         self.password = password
     }
+    
+    public func returnJSON() -> [String: Any] {
+        let jsonData = [
+            "host": self.host,
+            "port": self.port,
+            "username":  self.encryptionMethod,
+            "password": self.password
+        ]
+        
+        return jsonData
+    }
 }

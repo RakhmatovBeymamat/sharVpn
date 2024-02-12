@@ -17,10 +17,6 @@ import SwiftMessages
 
 class MainViewController: UIViewController, ViewSpecificController {
     
-    //test mainViewModel methods
-    let viewModel = MainViewModel()
-    let ssURL = "ss://YWVzLTI1Ni1nY206ODg4OTk5@91.215.152.217:8388#%D1%82%D0%B5%D1%81%D1"
-    
     //MARK: - RootView
     typealias RootView = MainView
     
@@ -36,13 +32,17 @@ class MainViewController: UIViewController, ViewSpecificController {
         "username": "aes-256-gcm",
         "password": 888999
     ]
+        
+    let viewModel = MainViewModel()
+    let ssURL = "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpEbU1RVW1JN3BnUURucldxTFhDMDBM@94.228.165.234:15214#Sweden%20#514%20/%20OutlineKeys.com"
+    
     
     //MARK: - Actions
     @IBAction func enableButtonAction(_ sender: Any) {
         print("test")
         startAnimation()
         guard let configJson = configJson, containsExpectedKeys(configJson) else { return }
-        vpn.start("0", configJson: configJson) { errorCode in
+        vpn.start("0", configJson: (viewModel.parseShadowsocksURL(ssURL)?.returnJSON())!) { errorCode in
             if errorCode == .noError {
                 print("VPN tunnel started successfully")
             } else {
@@ -57,20 +57,29 @@ class MainViewController: UIViewController, ViewSpecificController {
         parseSSURl(url: ssURL)
     }
     
+    @IBAction func plusButton(_ sender: Any) {
+        coordinator?.presentAddView(viewController: self)
+        parseSSURl(url: ssURL)
+    }
+    
     
     //MARK: - Lifecycles
+    
     override func viewDidLoad() {
+        navigationItem.setHidesBackButton(true, animated: false)
         super.viewDidLoad()
         print("tunnel: \(vpn.isActive("0"))")
         apperanceSettings()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: false)
         setupPlusBtn()
         setupAddKeyBtn()
     }
+
 }
 
 //MARK: - Other funcs
@@ -121,11 +130,12 @@ extension MainViewController {
         iconImageView.tintColor = .appColor(.lightPink)
         iconImageView.center = CGPoint(x: buttonSize.width / 2, y: buttonSize.height / 2)
         
-        view().plusButton.layer.addSublayer(backgroundLayer)
-        view().plusButton.layer.addSublayer(background)
-        view().plusButton.addSubview(iconImageView)
+        let plusButton = view().plusButton
+        plusButton!.addSubview(iconImageView)
+        plusButton!.layer.insertSublayer(backgroundLayer, at: 0)
+        plusButton!.layer.insertSublayer(background, at: 1)
+        
     }
-    
     
     private func setupAddKeyBtn() {
         lazy var gradientLayer: CAGradientLayer = {
@@ -163,7 +173,7 @@ extension MainViewController {
         attributedText.addAttributes(addKeyAttributes, range: NSRange(location: 0, length: 13))
         
         let sharAttributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.MontserratAlternates.light.size(of: 22),
+            .font: UIFont.Neuropol.neuropol.size(of: 22),
             .foregroundColor: UIColor.white
         ]
         attributedText.addAttributes(sharAttributes, range: NSRange(location: 14, length: 3))
