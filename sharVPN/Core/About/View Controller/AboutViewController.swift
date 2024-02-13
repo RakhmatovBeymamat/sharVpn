@@ -26,13 +26,6 @@ final class AboutViewController: UIViewController, ViewSpecificController {
             openFile()
         }
     }
-    internal var dataForTableView: [ContactsTableData]? {
-        didSet {
-            guard let dataForTableView = dataForTableView else { return }
-            contactsDataProvider.tableView = view().contactsTableView
-            contactsDataProvider.items = dataForTableView
-        }
-    }
     
     internal var data: [LicensesModel]? {
         didSet {
@@ -61,8 +54,8 @@ extension AboutViewController {
     private func apperanceSettings() {
         dataProvider.viewController = self
         contactsDataProvider.viewController = self
-        
-        self.dataForTableView = ContactsTableData.data()
+        contactsDataProvider.tableView = view().contactsTableView
+
         self.data = [LicensesModel(name: "Конфиденциальность", fileName: "attribution"),
                      LicensesModel(name: "Сбор данных", fileName: "conditions"),
                      LicensesModel(name: "Лицензии", fileName: "dataCollection"),

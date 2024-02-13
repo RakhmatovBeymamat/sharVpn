@@ -28,6 +28,7 @@ final class MainViewController: UIViewController, ViewSpecificController, AlertV
     
     //MARK: - Attributes
     private let viewModel = MainViewModel()
+    private var shouldAnimate = false
     private let ssURL = "ss://YWVzLTI1Ni1nY206ODg4OTk5@91.215.152.217:8388#%D1%82%D0%B5%D1%81%D1%82"
     
     //MARK: - Actions
@@ -54,6 +55,7 @@ final class MainViewController: UIViewController, ViewSpecificController, AlertV
     override func viewDidLoad() {
         super.viewDidLoad()
         apperanceSettings()
+        setupButtonStatus()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -90,19 +92,23 @@ extension MainViewController {
     private func parseSSURl(url: String) {
         guard let configJson = viewModel.parseShadowsocksURL(url)?.returnJSON() else {
             showErrorAlert(message: "URL error")
+            vpn.stop("0")
+            setupButtonStatus()
             return }
         
         guard !vpn.isActive("0") else { 
             vpn.stop("0")
+            setupButtonStatus()
             return }
         startAnimation()
         vpn.start("0", configJson: configJson) { [weak self] errorCode in
             guard let `self` = self else { return }
             if errorCode == .noError {
                 Haptic.impact(.soft).generate()
-                stopAnimation()
+                setupButtonStatus()
             } else {
                 stopAnimation()
+                showErrorAlert()
             }
         }
     }
@@ -173,6 +179,39 @@ extension MainViewController {
         view().addKeyButton.setAttributedTitle(attributedText, for: .normal)
     }
     
+    private func setupButtonStatus() {
+        let active = vpn.isActive("0")
+        self.shouldAnimate = active
+        view().ballBtn.setImage(active ? .appImage(.ballActiv) : .appImage(.ballNoActiv), for: .normal)
+        buttonAnimation()
+        stopAnimation()
+    }
+    
+    private func buttonAnimation() {
+        guard shouldAnimate else {
+            view().imageView1.alpha = 0
+            view().imageView2.alpha = 0
+            view().backImage.image = .appImage(.background)
+            return }
+        UIView.animate(withDuration: 0.7, delay: 0, options: .curveEaseInOut, animations: {
+            self.view().backImage.image = .appImage(.backActive)
+            self.view().imageView1.alpha = 1
+        }, completion: { _ in
+            UIView.animate(withDuration: 0.7, delay: 0, options: .curveEaseInOut, animations: {
+                self.view().imageView2.alpha = 1
+            }, completion: { _ in
+                UIView.animate(withDuration: 0.7, delay: 0, options: .curveEaseInOut, animations: {
+                    self.view().imageView1.alpha = 0
+                }, completion: { _ in
+                    UIView.animate(withDuration: 0.7, delay: 0, options: .curveEaseInOut, animations: {
+                        self.view().imageView2.alpha = 0
+                    }, completion: { _ in
+                        self.buttonAnimation()
+                    })
+                })
+            })
+        })
+    }
 }
 
 //MARK: - AddKeyPopUpViewControllerDelegate

@@ -21,10 +21,4 @@ final class ContactsTableCell: CustomTableViewCell {
         self.clipsToBounds = true
     }
     
-    //MARK: - Other funcs
-    internal func configure(with title: String, image: UIImage) {
-        cellLabel.text = title
-        cellIcon.image = image
-    }
-    
 }

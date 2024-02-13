@@ -35,10 +35,9 @@ final class MainViewCoordinator: Coordinator {
         let segue = SwiftMessagesSegue(identifier: nil, source: viewController, destination: vc)
         segue.interactiveHide = true
         segue.dimMode = .none
-        segue.configure(layout: .bottomTab)
+        segue.configure(layout: .centered)
         segue.messageView.backgroundHeight = 290
         segue.messageView.layoutMarginAdditions = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-
         segue.perform()
     }
 }

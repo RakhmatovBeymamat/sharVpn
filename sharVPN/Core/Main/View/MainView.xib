@@ -33,10 +33,10 @@
                         <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="bG7-83-1kQ">
                             <rect key="frame" x="12" y="170" width="366" height="408"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back3" translatesAutoresizingMaskIntoConstraints="NO" id="G6O-wc-MmZ">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back3" translatesAutoresizingMaskIntoConstraints="NO" id="G6O-wc-MmZ">
                                     <rect key="frame" x="20" y="41" width="326" height="326"/>
                                 </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back1" translatesAutoresizingMaskIntoConstraints="NO" id="bOX-7Y-6c6">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back1" translatesAutoresizingMaskIntoConstraints="NO" id="bOX-7Y-6c6">
                                     <rect key="frame" x="0.0" y="21" width="366" height="366"/>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4A-k7-OS1">
@@ -158,6 +158,7 @@
             <connections>
                 <outlet property="addKeyButton" destination="Ieb-Zr-9AG" id="UI6-7Z-ajT"/>
                 <outlet property="arrowImageView" destination="LdB-KD-Veo" id="fyu-1x-6rE"/>
+                <outlet property="backImage" destination="axi-5u-xPz" id="pOI-rg-RYR"/>
                 <outlet property="ballBtn" destination="q4A-k7-OS1" id="yHy-UI-At3"/>
                 <outlet property="imageView1" destination="G6O-wc-MmZ" id="ZSy-gZ-1PP"/>
                 <outlet property="imageView2" destination="bOX-7Y-6c6" id="FX2-nk-xg6"/>

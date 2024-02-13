@@ -68,7 +68,6 @@
 		D1D401642B75EA5900358D18 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D401632B75EA5900358D18 /* AlertViewController.swift */; };
 		D1D7898B2B79F2FA00BFB6E4 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D7898A2B79F2FA00BFB6E4 /* ReusableView.swift */; };
 		D1D7898E2B79F37800BFB6E4 /* AboutDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D7898D2B79F37800BFB6E4 /* AboutDataProvider.swift */; };
-		D1D789912B79F80F00BFB6E4 /* ContactsTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D789902B79F80F00BFB6E4 /* ContactsTableData.swift */; };
 		D1D789932B79F99400BFB6E4 /* Bundle+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D789922B79F99400BFB6E4 /* Bundle+Extenstion.swift */; };
 /* End PBXBuildFile section */
 
@@ -172,7 +171,6 @@
 		D1D401632B75EA5900358D18 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		D1D7898A2B79F2FA00BFB6E4 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		D1D7898D2B79F37800BFB6E4 /* AboutDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutDataProvider.swift; sourceTree = "<group>"; };
-		D1D789902B79F80F00BFB6E4 /* ContactsTableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableData.swift; sourceTree = "<group>"; };
 		D1D789922B79F99400BFB6E4 /* Bundle+Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extenstion.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -559,7 +557,6 @@
 		D1D7898F2B79F80400BFB6E4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D1D789902B79F80F00BFB6E4 /* ContactsTableData.swift */,
 				D1B2992F2B7B6D9D00EFCC7E /* LicensesModel.swift */,
 			);
 			path = Models;
@@ -768,7 +765,6 @@
 				D1D401622B75E9AE00358D18 /* AddKeyPopUpViewController.swift in Sources */,
 				372D29012B6BF8A200066EA1 /* Coordinator.swift in Sources */,
 				D1D401642B75EA5900358D18 /* AlertViewController.swift in Sources */,
-				D1D789912B79F80F00BFB6E4 /* ContactsTableData.swift in Sources */,
 				37D400972B696CE100D7D709 /* AppDelegate.swift in Sources */,
 				37D400EF2B6A5C2B00D7D709 /* AboutViewController.swift in Sources */,
 				372D290B2B6C326700066EA1 /* AboutViewCoordinator.swift in Sources */,

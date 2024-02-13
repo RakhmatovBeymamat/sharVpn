@@ -20,11 +20,6 @@ final class ContactsDataProvider: NSObject, UITableViewDelegate, UITableViewData
     
     //MARK: - Attributes
     weak var viewController: UIViewController?
-    internal var items = [ContactsTableData]() {
-        didSet {
-            tableView.reloadData()
-        }
-    }
     
     //MARK: - Lifecycles
     init(viewController: UIViewController? = nil) {
@@ -42,8 +37,6 @@ final class ContactsDataProvider: NSObject, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ContactsTableCell.defaultReuseIdentifier) as? ContactsTableCell else { return UITableViewCell() }
-        cell.configure(with: items[indexPath.row].text,
-                             image: items[indexPath.row].image)
         cell.selectionStyle = .none
         return cell
     }

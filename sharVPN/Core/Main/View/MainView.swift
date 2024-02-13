@@ -17,5 +17,6 @@ final class MainView: CustomView {
     @IBOutlet weak var addKeyButton: UIButton!
     @IBOutlet weak var imageView1: UIImageView!
     @IBOutlet weak var imageView2: UIImageView!
+    @IBOutlet weak var backImage: UIImageView!
 
 }
