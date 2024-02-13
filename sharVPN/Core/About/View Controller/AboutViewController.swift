@@ -7,10 +7,9 @@
 
 import UIKit
 import QuickLook
+import MessageUI
 
-class AboutViewController: UIViewController, ViewSpecificController {
-    
-    let dataForTableView = ContactsTableData.data()
+final class AboutViewController: UIViewController, ViewSpecificController {
     
     //MARK: - Root View
     typealias RootView = AboutView
@@ -19,37 +18,36 @@ class AboutViewController: UIViewController, ViewSpecificController {
     internal var coordinator: AboutViewCoordinator?
     
     //MARK: - Attributes
+    private let dataProvider = AboutDataProvider()
+    private let contactsDataProvider = ContactsDataProvider()
+    internal var selectedFileName: String? {
+        didSet {
+            guard let _ = selectedFileName else { return }
+            openFile()
+        }
+    }
+    internal var dataForTableView: [ContactsTableData]? {
+        didSet {
+            guard let dataForTableView = dataForTableView else { return }
+            contactsDataProvider.tableView = view().contactsTableView
+            contactsDataProvider.items = dataForTableView
+        }
+    }
     
-    private let filesName = ["politicy",
-                             "dataCollection",
-                             "attribution",
-                             "conditions"]
-    var selectedFileName: String?
+    internal var data: [LicensesModel]? {
+        didSet {
+            guard let data = data else { return }
+            dataProvider.tableView = view().licenseTableView
+            dataProvider.items = data
+        }
+    }
 
-
-    
-    @IBOutlet weak var contactsTableView: UITableView!
-
-    @IBOutlet weak var licenseTableView: UITableView!
-    
-    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        licenseTableView.register(LicenseTableCell.nib(), forCellReuseIdentifier: LicenseTableCell.identifier)
-        contactsTableView.register(ContactsTableCell.nib(), forCellReuseIdentifier: ContactsTableCell.identifier)
-        
-        licenseTableView.delegate = self
-        licenseTableView.dataSource = self
-        contactsTableView.delegate = self
-        contactsTableView.dataSource = self
-        
-        contactsTableView.backgroundColor = .appColor(.mainBackground)
-        licenseTableView.layer.cornerRadius = 20
-        
+        apperanceSettings()
         getVersion()
         setupText()
-        
     }
         
     override func viewWillAppear(_ animated: Bool) {
@@ -58,14 +56,21 @@ class AboutViewController: UIViewController, ViewSpecificController {
     }
 }
 
-
+//MARK: - Other funcs
 extension AboutViewController {
     private func apperanceSettings() {
+        dataProvider.viewController = self
+        contactsDataProvider.viewController = self
         
+        self.dataForTableView = ContactsTableData.data()
+        self.data = [LicensesModel(name: "Конфиденциальность", fileName: "attribution"),
+                     LicensesModel(name: "Сбор данных", fileName: "conditions"),
+                     LicensesModel(name: "Лицензии", fileName: "dataCollection"),
+                     LicensesModel(name: "Условия использования", fileName: "politicy")]
     }
     
     private func getVersion() {
-        guard let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else {return}
+        guard let version = Bundle.main.releaseVersionNumber else {return}
         view().versionLabel.text = "Версия \(version)"
     }
     
@@ -94,65 +99,13 @@ extension AboutViewController {
     }
     
     private func openFile() {
-        guard selectedFileName != nil else { return }
-        
         let previewController = QLPreviewController()
         previewController.dataSource = self
         present(previewController, animated: true, completion: nil)
     }
 }
 
-
-//MARK: - Расширение с методы TableView
-extension AboutViewController: UITableViewDelegate, UITableViewDataSource {
-    //MARK: - Методы для настройки ContactsTableView и LicenseTableView
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return contactsTableView == tableView ? 1.0 : 1.0
-    }
-
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableView == contactsTableView ? dataForTableView.count : 4
-    }
-    
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if tableView == contactsTableView {
-            let customCell = tableView.dequeueReusableCell(withIdentifier: ContactsTableCell.identifier,
-                                                           for: indexPath) as! ContactsTableCell
-            
-            customCell.configure(with: dataForTableView[indexPath.row].text,
-                                 image: dataForTableView[indexPath.row].image)
-
-            customCell.backgroundColor = UIColor.white
-            customCell.layer.cornerRadius = 20
-            customCell.clipsToBounds = true
-            
-            return customCell
-            
-        } else if tableView == licenseTableView {
-            let customCell = tableView.dequeueReusableCell(withIdentifier: LicenseTableCell.identifier, for: indexPath) as! LicenseTableCell
-            customCell.labelText.text = LicenseTableCell.data[indexPath.row]
-            
-            return customCell
-        }
-        
-        return UITableViewCell()
-            
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedFileName = filesName[indexPath.row]
-        tableView.deselectRow(at: indexPath, animated: true)
-        openFile()
-    }
-}
-
+//MARK: - QLPreviewControllerDataSource
 extension AboutViewController: QLPreviewControllerDataSource {
     func numberOfPreviewItems(in controller: QLPreviewController) -> Int {
         return 1
@@ -164,5 +117,26 @@ extension AboutViewController: QLPreviewControllerDataSource {
             fatalError("Could not find file: \(String(describing: selectedFileName))")
         }
         return fileURL as QLPreviewItem
+    }
+}
+
+//MARK: - MFMailComposeViewControllerDelegate
+extension AboutViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
+    
+    internal func openMail() {
+        let recipientEmail = "sharvpn@gmail.com"
+        if MFMailComposeViewController.canSendMail() {
+            let mailComposer = MFMailComposeViewController()
+            mailComposer.mailComposeDelegate = self
+            mailComposer.setToRecipients([recipientEmail])
+            mailComposer.setSubject("Subject")
+            mailComposer.setMessageBody("Message body", isHTML: false)
+            present(mailComposer, animated: true, completion: nil)
+        } else {
+            print("Mail services are not available")
+        }
     }
 }

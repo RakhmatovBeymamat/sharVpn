@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "ph_info-fill.png",
+      "filename" : "Ellipse 18.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "ph_info-fill@2x.png",
+      "filename" : "Ellipse 18@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "ph_info-fill@3x.png",
+      "filename" : "Ellipse 18@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
@@ -19,8 +19,5 @@
   "info" : {
     "author" : "xcode",
     "version" : 1
-  },
-  "properties" : {
-    "template-rendering-intent" : "template"
   }
 }

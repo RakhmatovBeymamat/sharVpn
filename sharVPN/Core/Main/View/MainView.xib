@@ -33,6 +33,12 @@
                         <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="bG7-83-1kQ">
                             <rect key="frame" x="12" y="170" width="366" height="408"/>
                             <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back3" translatesAutoresizingMaskIntoConstraints="NO" id="G6O-wc-MmZ">
+                                    <rect key="frame" x="20" y="41" width="326" height="326"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back1" translatesAutoresizingMaskIntoConstraints="NO" id="bOX-7Y-6c6">
+                                    <rect key="frame" x="0.0" y="21" width="366" height="366"/>
+                                </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4A-k7-OS1">
                                     <rect key="frame" x="0.0" y="0.0" width="366" height="408"/>
                                     <state key="normal" title="Button"/>
@@ -47,13 +53,21 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
+                                <constraint firstItem="bOX-7Y-6c6" firstAttribute="leading" secondItem="bG7-83-1kQ" secondAttribute="leading" id="02f-jU-4GH"/>
+                                <constraint firstAttribute="bottom" secondItem="bOX-7Y-6c6" secondAttribute="bottom" constant="21" id="8fm-5R-t1t"/>
                                 <constraint firstAttribute="trailing" secondItem="LdB-KD-Veo" secondAttribute="trailing" id="A8f-60-F9S"/>
                                 <constraint firstAttribute="bottom" secondItem="q4A-k7-OS1" secondAttribute="bottom" id="B7g-SB-KWf"/>
                                 <constraint firstAttribute="bottom" secondItem="LdB-KD-Veo" secondAttribute="bottom" id="Ili-PD-dU5"/>
                                 <constraint firstItem="LdB-KD-Veo" firstAttribute="top" secondItem="bG7-83-1kQ" secondAttribute="top" id="Rnv-QU-skJ"/>
                                 <constraint firstItem="q4A-k7-OS1" firstAttribute="leading" secondItem="bG7-83-1kQ" secondAttribute="leading" id="TPn-Vk-c8B"/>
+                                <constraint firstAttribute="trailing" secondItem="bOX-7Y-6c6" secondAttribute="trailing" id="X54-YA-0KB"/>
+                                <constraint firstAttribute="trailing" secondItem="G6O-wc-MmZ" secondAttribute="trailing" constant="20" id="euZ-oC-q98"/>
+                                <constraint firstItem="G6O-wc-MmZ" firstAttribute="leading" secondItem="bG7-83-1kQ" secondAttribute="leading" constant="20" id="iYX-aO-Q9i"/>
                                 <constraint firstAttribute="trailing" secondItem="q4A-k7-OS1" secondAttribute="trailing" id="lsN-yN-Ih7"/>
                                 <constraint firstItem="q4A-k7-OS1" firstAttribute="top" secondItem="bG7-83-1kQ" secondAttribute="top" id="opz-Zv-xts"/>
+                                <constraint firstItem="G6O-wc-MmZ" firstAttribute="top" secondItem="bG7-83-1kQ" secondAttribute="top" constant="41" id="pla-L6-b4g"/>
+                                <constraint firstAttribute="bottom" secondItem="G6O-wc-MmZ" secondAttribute="bottom" constant="41" id="qR7-aP-Kxw"/>
+                                <constraint firstItem="bOX-7Y-6c6" firstAttribute="top" secondItem="bG7-83-1kQ" secondAttribute="top" constant="21" id="qfD-Gb-3eh"/>
                                 <constraint firstItem="LdB-KD-Veo" firstAttribute="leading" secondItem="bG7-83-1kQ" secondAttribute="leading" id="rCF-o2-g6d"/>
                             </constraints>
                         </view>
@@ -78,8 +92,8 @@
                                 <constraint firstAttribute="bottom" secondItem="E9C-aC-82f" secondAttribute="bottom" id="zhm-uB-Xhk"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgh-Ld-EmV">
-                            <rect key="frame" x="333" y="67" width="45" height="45"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgh-Ld-EmV">
+                            <rect key="frame" x="336" y="61" width="45" height="45"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="45" id="5Fq-CY-jvD"/>
                                 <constraint firstAttribute="height" constant="45" id="Gox-qV-cQD"/>
@@ -145,6 +159,8 @@
                 <outlet property="addKeyButton" destination="Ieb-Zr-9AG" id="UI6-7Z-ajT"/>
                 <outlet property="arrowImageView" destination="LdB-KD-Veo" id="fyu-1x-6rE"/>
                 <outlet property="ballBtn" destination="q4A-k7-OS1" id="yHy-UI-At3"/>
+                <outlet property="imageView1" destination="G6O-wc-MmZ" id="ZSy-gZ-1PP"/>
+                <outlet property="imageView2" destination="bOX-7Y-6c6" id="FX2-nk-xg6"/>
                 <outlet property="plusButton" destination="dgh-Ld-EmV" id="p6W-to-k8g"/>
                 <outlet property="titleLabel" destination="E9C-aC-82f" id="hXs-kb-bMR"/>
             </connections>
@@ -158,6 +174,8 @@
     </designables>
     <resources>
         <image name="arrow" width="289" height="289"/>
+        <image name="back1" width="316" height="319"/>
+        <image name="back3" width="276" height="276"/>
         <image name="background" width="1500" height="2239"/>
         <image name="ballNoActiv" width="349" height="368"/>
         <namedColor name="darkBlue">

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MainViewModel {
+final class MainViewModel {
     func parseShadowsocksURL(_ url: String) -> ShadowSocksData? {
         guard let urlComponents = URLComponents(string: url) else { return nil }
         
@@ -51,7 +51,7 @@ public class ShadowSocksData {
         let jsonData = [
             "host": self.host,
             "port": self.port,
-            "username":  self.encryptionMethod,
+            "method":  self.encryptionMethod,
             "password": self.password
         ]
         

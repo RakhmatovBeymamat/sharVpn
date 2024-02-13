@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Haptica
 
 final class TabBarController: UITabBarController {
     
@@ -74,6 +75,8 @@ extension TabBarController {
         }
         propertyAnimator.addAnimations({ barItemView.transform = .identity }, delayFactor: CGFloat(timeInterval))
         propertyAnimator.startAnimation()
+        
+        Haptic.selection.generate()
             
     }
 }

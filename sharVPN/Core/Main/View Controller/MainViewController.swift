@@ -14,8 +14,9 @@ import CocoaLumberjackSwift
 import NetworkExtension
 import Sentry
 import SwiftMessages
+import Haptica
 
-class MainViewController: UIViewController, ViewSpecificController {
+final class MainViewController: UIViewController, ViewSpecificController, AlertViewController {
     
     //MARK: - RootView
     typealias RootView = MainView
@@ -26,60 +27,42 @@ class MainViewController: UIViewController, ViewSpecificController {
     private var animationLayer: CALayer!
     
     //MARK: - Attributes
-    private let configJson: [String: Any]? = [
-        "host": "91.215.152.217",
-        "port": 8388,
-        "username": "aes-256-gcm",
-        "password": 888999
-    ]
-        
-    let viewModel = MainViewModel()
-    let ssURL = "ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpEbU1RVW1JN3BnUURucldxTFhDMDBM@94.228.165.234:15214#Sweden%20#514%20/%20OutlineKeys.com"
-    
+    private let viewModel = MainViewModel()
+    private let ssURL = "ss://YWVzLTI1Ni1nY206ODg4OTk5@91.215.152.217:8388#%D1%82%D0%B5%D1%81%D1%82"
     
     //MARK: - Actions
-    @IBAction func enableButtonAction(_ sender: Any) {
-        print("test")
-        startAnimation()
-        guard let configJson = configJson, containsExpectedKeys(configJson) else { return }
-        vpn.start("0", configJson: (viewModel.parseShadowsocksURL(ssURL)?.returnJSON())!) { errorCode in
-            if errorCode == .noError {
-                print("VPN tunnel started successfully")
-            } else {
-                print("Failed to start VPN tunnel. Error code: \(errorCode.rawValue)")
-            }
-        }
-    }
-    
-    @IBAction func addKeyBtn(_ sender: Any) {
-        print("working")
-        coordinator?.presentAddView(viewController: self)
+    @IBAction func enableButtonAction(_ sender: UIButton) {
+        sender.showAnimation()
+        Haptic.impact(.soft).generate()
         parseSSURl(url: ssURL)
     }
     
-    @IBAction func plusButton(_ sender: Any) {
+    @IBAction func addKeyBtn(_ sender: UIButton) {
+        sender.showAnimation()
+        Haptic.impact(.soft).generate()
         coordinator?.presentAddView(viewController: self)
-        parseSSURl(url: ssURL)
+    }
+    
+    @IBAction func plusButton(_ sender: UIButton) {
+        sender.showAnimation()
+        Haptic.impact(.soft).generate()
+        coordinator?.presentAddView(viewController: self)
     }
     
     
     //MARK: - Lifecycles
-    
     override func viewDidLoad() {
-        navigationItem.setHidesBackButton(true, animated: false)
         super.viewDidLoad()
-        print("tunnel: \(vpn.isActive("0"))")
         apperanceSettings()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
         super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
         setupPlusBtn()
         setupAddKeyBtn()
     }
-
+    
 }
 
 //MARK: - Other funcs
@@ -87,11 +70,6 @@ extension MainViewController {
     private func apperanceSettings() {
         view().titleLabel.text = Localize.MainViewLoc.title
         view().titleLabel.font = UIFont.Neuropol.neuropol.size(of: 64)
-    }
-    
-    private func containsExpectedKeys(_ configJson: [String: Any]?) -> Bool {
-        return configJson?["host"] != nil && configJson?["port"] != nil &&
-        configJson?["password"] != nil && configJson?["username"] != nil
     }
     
     private func startAnimation() {
@@ -104,14 +82,28 @@ extension MainViewController {
         view().arrowImageView.layer.add(rotationAnimation, forKey: "rotationAnimation")
     }
     
+    private func stopAnimation() {
+        view().arrowImageView.isHidden = true
+        view().arrowImageView.layer.removeAnimation(forKey: "rotationAnimation")
+    }
+
     private func parseSSURl(url: String) {
-        if let test = viewModel.parseShadowsocksURL(url) {
-            print("")
-            print("---------------------------------")
-            print("Server: - \(test.host)")
-            print("Port: - \(test.port)")
-            print("Method: - \(test.encryptionMethod)")
-            print("Password: - \(test.password)")
+        guard let configJson = viewModel.parseShadowsocksURL(url)?.returnJSON() else {
+            showErrorAlert(message: "URL error")
+            return }
+        
+        guard !vpn.isActive("0") else { 
+            vpn.stop("0")
+            return }
+        startAnimation()
+        vpn.start("0", configJson: configJson) { [weak self] errorCode in
+            guard let `self` = self else { return }
+            if errorCode == .noError {
+                Haptic.impact(.soft).generate()
+                stopAnimation()
+            } else {
+                stopAnimation()
+            }
         }
     }
     
@@ -181,11 +173,6 @@ extension MainViewController {
         view().addKeyButton.setAttributedTitle(attributedText, for: .normal)
     }
     
-    //    func animateArrow() {
-    //        UIView.animate(withDuration: 2.0, delay: 0, options: [.curveLinear, .repeat], animations: {
-    //            self.arrowView.transform = CGAffineTransform(rotationAngle: .pi)
-    //        }, completion: nil)
-    //    }
 }
 
 //MARK: - AddKeyPopUpViewControllerDelegate
