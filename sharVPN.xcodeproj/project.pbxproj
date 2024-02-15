@@ -111,6 +111,8 @@
 
 /* Begin PBXFileReference section */
 		37197A3E2B6DDE7F00FE01CC /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		371D20FA2B7CC98C0051177C /* sharVPNDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sharVPNDebug.entitlements; sourceTree = "<group>"; };
+		371D20FB2B7CC9F90051177C /* VpnExtensionRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VpnExtensionRelease.entitlements; sourceTree = "<group>"; };
 		372D29002B6BF8A200066EA1 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		372D29022B6C1BB300066EA1 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		372D29042B6C1CAC00066EA1 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 		37D400952B696CE100D7D709 /* sharVPN */ = {
 			isa = PBXGroup;
 			children = (
+				371D20FA2B7CC98C0051177C /* sharVPNDebug.entitlements */,
 				37D49C7D2B796DCF004F7E72 /* sharVPN.entitlements */,
 				37D400E32B6A523100D7D709 /* Application */,
 				37D400C62B6972A100D7D709 /* Resources */,
@@ -513,6 +516,7 @@
 		D1B299142B7B4C7900EFCC7E /* VpnExtension */ = {
 			isa = PBXGroup;
 			children = (
+				371D20FB2B7CC9F90051177C /* VpnExtensionRelease.entitlements */,
 				D1B299152B7B4C7900EFCC7E /* AppProxyProvider.swift */,
 				D1B299172B7B4C7900EFCC7E /* Info.plist */,
 				D1B299182B7B4C7900EFCC7E /* VpnExtension.entitlements */,
@@ -969,11 +973,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = sharVPN/sharVPN.entitlements;
+				CODE_SIGN_ENTITLEMENTS = sharVPN/sharVPNDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CH24HJW7J2;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = E564BQU86C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sharVPN/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -986,9 +992,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sharVpn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sharVpn.vpnApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "SharVPN Development";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -1007,9 +1014,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = sharVPN/sharVPN.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CH24HJW7J2;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = E564BQU86C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = sharVPN/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1022,9 +1031,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sharVpn;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sharVpn.vpnApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "SharVPN Distribution";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -1116,9 +1126,11 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = VpnExtension/VpnExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CH24HJW7J2;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = E564BQU86C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VpnExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = VpnExtension;
@@ -1130,8 +1142,10 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sharVpn.VpnExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sharVpn.vpnApp.VpnExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "SharVPN Extension Development";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -1146,11 +1160,13 @@
 		D1B2991D2B7B4C7900EFCC7E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = VpnExtension/VpnExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = VpnExtension/VpnExtensionRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CH24HJW7J2;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = E564BQU86C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VpnExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = VpnExtension;
@@ -1162,8 +1178,10 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sharVpn.VpnExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sharVpn.vpnApp.VpnExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "SharVPN Extension Distribution";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

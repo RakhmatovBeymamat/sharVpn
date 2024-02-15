@@ -6,9 +6,9 @@
 	<array>
 		<string>packet-tunnel-provider</string>
 	</array>
-	<key>com.apple.security.application-groups</key>
+	<key>com.apple.developer.networking.vpn.api</key>
 	<array>
-		<string>group.com.sharVpn.vpnApp</string>
+		<string>allow-vpn</string>
 	</array>
 </dict>
 </plist>

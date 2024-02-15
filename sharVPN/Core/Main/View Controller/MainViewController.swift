@@ -25,6 +25,7 @@ final class MainViewController: UIViewController, ViewSpecificController, AlertV
     internal var coordinator: MainViewCoordinator?
     private let vpn = OutlineVpn.shared
     private var animationLayer: CALayer!
+    private var defaults = UserDefaults.standard
     
     //MARK: - Attributes
     private let viewModel = MainViewModel()
@@ -35,7 +36,7 @@ final class MainViewController: UIViewController, ViewSpecificController, AlertV
     @IBAction func enableButtonAction(_ sender: UIButton) {
         sender.showAnimation()
         Haptic.impact(.soft).generate()
-        parseSSURl(url: ssURL)
+        connectVpn()
     }
     
     @IBAction func addKeyBtn(_ sender: UIButton) {
@@ -72,6 +73,14 @@ extension MainViewController {
     private func apperanceSettings() {
         view().titleLabel.text = Localize.MainViewLoc.title
         view().titleLabel.font = UIFont.Neuropol.neuropol.size(of: 64)
+    }
+    
+    private func connectVpn() {
+        guard let key = defaults.value(forKey: "key") as? String else {
+            showErrorAlert(message: "Для подключения добавьте ключ ШАР")
+            return
+        }
+        parseSSURl(url: key)
     }
     
     private func startAnimation() {
@@ -182,9 +191,15 @@ extension MainViewController {
     private func setupButtonStatus() {
         let active = vpn.isActive("0")
         self.shouldAnimate = active
-        view().ballBtn.setImage(active ? .appImage(.ballActiv) : .appImage(.ballNoActiv), for: .normal)
+        UIView.transition(with: view(), duration: 1.3, options: .transitionCrossDissolve) {
+            self.view().ballBtn.setImage(active ? .appImage(.ballActiv) : .appImage(.ballNoActiv), for: .normal)
+        }
         buttonAnimation()
         stopAnimation()
+        
+//        UIView.transition(with: self.view, duration: 1.0, options: .transitionCrossDissolve, animations: {
+//            self.view.backgroundColor = UIColor.red // Новый цвет фона
+//        }, completion: nil)
     }
     
     private func buttonAnimation() {
@@ -217,7 +232,7 @@ extension MainViewController {
 //MARK: - AddKeyPopUpViewControllerDelegate
 extension MainViewController: AddKeyPopUpViewControllerDelegate {
     func didFinishKey(key: String) {
-        parseSSURl(url: key)
+        defaults.set(key, forKey: "key")
     }
 }
 

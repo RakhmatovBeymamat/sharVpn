@@ -18,6 +18,7 @@ final class AddKeyPopUpViewController: UIViewController, ViewSpecificController,
     
     //MARK: - Services
     internal var coordinator: MainViewCoordinator?
+    private var defaults = UserDefaults.standard
     
     //MARK: - Attributes
     weak var delegate: AddKeyPopUpViewControllerDelegate?
@@ -34,6 +35,12 @@ final class AddKeyPopUpViewController: UIViewController, ViewSpecificController,
 extension AddKeyPopUpViewController {
     private func appearanceSettings() {
         view().input.delegate = self
+        
+        if let savedKey = defaults.value(forKey: "key") as? String {
+            view().input.text = savedKey
+        } else {
+            view().input.text = ""
+        }
     }
 }
 
