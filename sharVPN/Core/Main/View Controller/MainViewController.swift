@@ -66,6 +66,7 @@ final class MainViewController: UIViewController, ViewSpecificController, AlertV
         setupAddKeyBtn()
     }
     
+    
 }
 
 //MARK: - Other funcs
@@ -172,9 +173,17 @@ extension MainViewController {
     }
     
     private func setupCustomTextButton() {
-        view().addKeyButton.titleLabel?.text = "Добавить настройки"
-        view().addKeyButton.titleLabel?.font = .MontserratAlternates.medium.size(of: 22)
+
+        let attributedText = NSMutableAttributedString(string: "Добавить настройки")
+        // Атрибуты для слова "Добавить ключ"
+        let addKeyAttributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont.MontserratAlternates.medium.size(of: 22),
+            .foregroundColor: UIColor.white
+        ]
+        attributedText.addAttributes(addKeyAttributes, range: NSRange(location: 0, length: attributedText.length))
+        view().addKeyButton.setAttributedTitle(attributedText, for: .normal)
     }
+
     
     private func setupButtonStatus() {
         let active = vpn.isActive("0")

@@ -129,6 +129,7 @@
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Добавить настройки">
+                        <fontDescription key="titleFontDescription" name="MontserratAlternates-Medium" family="Montserrat Alternates" pointSize="22"/>
                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
                     <userDefinedRuntimeAttributes>
@@ -170,7 +171,7 @@
     </objects>
     <designables>
         <designable name="Ieb-Zr-9AG">
-            <size key="intrinsicContentSize" width="189" height="34.333333333333336"/>
+            <size key="intrinsicContentSize" width="293" height="41"/>
         </designable>
     </designables>
     <resources>
