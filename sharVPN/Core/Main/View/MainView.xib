@@ -128,7 +128,7 @@
                         <constraint firstAttribute="height" constant="80" id="Vbb-R1-DB5"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Добавить ключ ШАР">
+                    <buttonConfiguration key="configuration" style="plain" title="Добавить настройки">
                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </buttonConfiguration>
                     <userDefinedRuntimeAttributes>
@@ -170,7 +170,7 @@
     </objects>
     <designables>
         <designable name="Ieb-Zr-9AG">
-            <size key="intrinsicContentSize" width="187" height="34.333333333333336"/>
+            <size key="intrinsicContentSize" width="189" height="34.333333333333336"/>
         </designable>
     </designables>
     <resources>

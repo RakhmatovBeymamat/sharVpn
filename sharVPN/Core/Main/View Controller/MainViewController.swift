@@ -172,20 +172,8 @@ extension MainViewController {
     }
     
     private func setupCustomTextButton() {
-        let attributedText = NSMutableAttributedString(string: "Добавить ключ ШАР")
-        let addKeyAttributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.MontserratAlternates.medium.size(of: 22),
-            .foregroundColor: UIColor.white
-        ]
-        attributedText.addAttributes(addKeyAttributes, range: NSRange(location: 0, length: 13))
-        
-        let sharAttributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.Neuropol.neuropol.size(of: 22),
-            .foregroundColor: UIColor.white
-        ]
-        attributedText.addAttributes(sharAttributes, range: NSRange(location: 14, length: 3))
-        
-        view().addKeyButton.setAttributedTitle(attributedText, for: .normal)
+        view().addKeyButton.titleLabel?.text = "Добавить настройки"
+        view().addKeyButton.titleLabel?.font = .MontserratAlternates.medium.size(of: 22)
     }
     
     private func setupButtonStatus() {
